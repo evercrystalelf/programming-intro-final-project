@@ -8,7 +8,7 @@ def _makeIDGen():
 
 _idGen = _makeIDGen()
 _stateset1 = ['Utah', 'Texas', 'Ohio', 'California', 'Idaho', 'Maine', 'Alaska', 'Colorado', 'North Carolina', 'New York']
-_visittype = ['VT1', 'VT2', 'VT3', 'VT4', 'VT5']
+_visittype = ['primary care', 'specialist', 'hospital inpatient', 'emergency', 'nursing facility']
 _heights = {
     58: (91, 186), 
     59: (94, 193), 
