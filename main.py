@@ -30,7 +30,7 @@ class Adult:
         self.triglycerides = random.randint(35,200)
         self.HDL = random.randint(20,100)
         self.LDL = random.randint(40,190)
-        self.totalcholesterol = random.randint(100,300)
+        self.total_cholesterol = random.randint(100,300)
         self.CRP = random.randint(0,12)
         self.disease = random.choice(_disease_at_admission)
         self.comorbidities = random.choice(_comorbidities)
@@ -43,7 +43,7 @@ cardio_case = []  # opening a new empty list for adults only
         if Age: >12:  # selecting adults then tacking on laboratory_tests
             cardio_case.append(file)
     for file in cardio_case:
-        cardio_case.append(
+        cardio_case.append(triglycerides{self.triglycerides}, HDL{self.HDL}, LDL{self.LDL}, total_cholesterol{self.total_cholesterol}, CRP{self.CRP}, disease_at_admission{self.disease_at_admission}, comorbidities{self.comobidities})
   
         
 # now to use the laboratory_test values to asses the risk value for cardivascular disease.
@@ -66,9 +66,9 @@ def risk_score ():
     
         if sex = M and HDL < 40:
             points+=1
-        else:
-            if sex = F and HDL <50:
-                points+=1
+            else:
+                if sex = F and HDL <50:
+                    points+=1
    
                                
         if LDL > 100:
@@ -82,7 +82,7 @@ def risk_score ():
     
     risk_score = points
     
-    cardio_case = f.cardio_case.append(points) # adding the point total to the adult patients
+    cardio_case = f.cardio_case.append(risk_score) # adding the point total to the adult patients
 
 def Risk ():
     for item in cardio_case:
