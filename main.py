@@ -9,6 +9,10 @@ for i in range(0, 300):
     patients.append(p)
 #print(patients)
 
+open('patients.csv', 'w', newline='') as file:
+   writer.writerows(patients)
+f.close()    
+
 #laboratory_tests = ['triglycerides', 'HDL', 'LDL', 'total_cholesterol', 'CRP']
 
 triglycerides = random.randint(35,200) #mg/dL
@@ -39,11 +43,13 @@ class Adult:
 # _disease_at_admission and _comorbidities and add it to the patient's file This will be a for/if block
 
 cardio_case = []  # opening a new empty list for adults only
-    for file in patients: # going throught the paitent files
-        if Age: >12:  # selecting adults then tacking on laboratory_tests
-            cardio_case.append(file)
-    for file in cardio_case:
-        cardio_case.append(triglycerides{self.triglycerides}, HDL{self.HDL}, LDL{self.LDL}, total_cholesterol{self.total_cholesterol}, CRP{self.CRP}, disease_at_admission{self.disease_at_admission}, comorbidities{self.comobidities})
+
+cardio_case.append(list(filter(lambda x: x.age >= 12, patients))) #get all the adults into a list
+
+#tacking on laboratory_test values
+
+for file in cardio_case:
+    cardio_case.append(triglycerides{self.triglycerides}, HDL{self.HDL}, LDL{self.LDL}, total_cholesterol{self.total_cholesterol}, CRP{self.CRP}, disease_at_admission{self.disease_at_admission}, comorbidities{self.comobidities})
   
         
 # now to use the laboratory_test values to asses the risk value for cardivascular disease.
@@ -100,8 +106,8 @@ def Risk ():      # assigning each total point possibliity to a risk estimation
             Risk = major
     cardio_case = item.cardio_case.append(Risk)
 
-# now opening a csv file and putting the Dataset in
+# now opening a csv file and putting the adult cardio cases in
 
-#open('cardio_case.csv', 'w', newline='') as file:
-   #writer.writerows(cardio_case)
-#f.close()    
+open('cardio_case.csv', 'w', newline='') as file:
+   writer.writerows(cardio_case)
+f.close()    
