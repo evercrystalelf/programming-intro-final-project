@@ -61,8 +61,8 @@ def risk_score ():
     for f in cardio_case:                           
                                
     
-        if triglyceride > 150:
-            points+=1
+        if triglyceride > 150: # if the value meets the condition
+            points+=1          # a point is added
     
         if sex = M and HDL < 40:
             points+=1
@@ -80,11 +80,11 @@ def risk_score ():
         if CRP > 2:
             points+=1
     
-    risk_score = points
+    risk_score = points # the total points
     
     cardio_case = f.cardio_case.append(risk_score) # adding the point total to the adult patients
 
-def Risk ():
+def Risk ():      # assigning each total point possibliity to a risk estimation
     for item in cardio_case:
         if points = 0:
             Risk = low
@@ -99,3 +99,9 @@ def Risk ():
         if points = 5:
             Risk = major
     cardio_case = item.cardio_case.append(Risk)
+
+# now opening a csv file and putting the Dataset in
+
+#open('cardio_case.csv', 'w', newline='') as file:
+   #writer.writerows(cardio_case)
+#f.close()    
