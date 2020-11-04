@@ -24,7 +24,7 @@ with open('patients.csv', 'w', newline='') as file:
     # write every patinet to the csv file
     for p in patients:
         w.writerow([p.id, p.provider, p.age, p.sex, p.state, p.visittype, p.weight, p.height, p.heart_rate, p.respiration, p.blood_pressure, p.temperature])
-
+        
 #laboratory_tests = ['triglycerides', 'HDL', 'LDL', 'total_cholesterol', 'CRP']
 
 #triglycerides = random.randint(35,200) #mg/dL
@@ -52,7 +52,7 @@ class Adult:   # creating a class called Adult
         self.comorbidities = random.choice(_comorbidities)
      
     def __str__(self):
-        return f'Triglycerides: {self.triglycerides}, HDL: {self.HDL}, LDL: {self.LDL}, Total Cholesterol: {self.total_cholesterol}, CRP: {self.CRP}, Disease at Admission: {self.disease_at_admission}, Comorbidities: {self.comorbidities})'
+        return f'Triglycerides: {self.triglycerides}, HDL: {self.HDL}, LDL: {self.LDL}, Total Cholesterol: {self.total_cholesterol}, CRP: {self.CRP}, Disease at Admission: {self.disease}, Comorbidities: {self.comorbidities})'
 
     def __repr__(self):
         return str(self)
@@ -66,8 +66,9 @@ class Adult:   # creating a class called Adult
 
         #tacking on laboratory_test values
     
- for file in cardio_case:
-     cardio_case.append(Adult)
+ for file in cardio_case: 
+    file = [(Adult())]
+    cardio_case.append(file)
         
                 
         # now to use the laboratory_test values to asses the risk value for cardivascular disease.
@@ -80,21 +81,20 @@ class Adult:   # creating a class called Adult
         # CRP > 2
 
 def risk_score ():
+    
     points = 0   #setting itteration value to 0 for addition
     
-    for f in cardio_case:                           
-                               
-    
+      for f in cardio_case:
+            
         if triglyceride > 150: # if the value meets the condition
             points+=1          # a point is added
-    
-        if sex = M and HDL < 40:
+
+        if string.index (M,34,36) and HDL < 40:
             points+=1
-            else:
-                if sex = F and HDL <50:
-                    points+=1
-   
-                               
+
+        if string.index (F,34,36) and HDL <50:
+            points+=1
+                    
         if LDL > 100:
             points+=1
     
@@ -110,22 +110,25 @@ def risk_score ():
 
 def Risk ():      # assigning each total point possibliity to a risk estimation
     for item in cardio_case:
-        if points = 0:
-            Risk = low
-        if points = 1:
-            Risk = mild
-        if points = 2:
-            Risk = moderate
-        if points = 3:
-            Risk = moderate high
-        if points = 4:
-            Risk = high
-        if points = 5:
-            Risk = major
+        if points == 0:
+            Risk = 'low'
+        if points == 1:
+            Risk = 'mild'
+        if points == 2:
+            Risk = 'moderate'
+        if points == 3:
+            Risk = 'moderate high'
+        if points == 4:
+            Risk = 'high'
+        if points == 5:
+            Risk = 'major'
     cardio_case = item.cardio_case.append(Risk)
 
 # now opening a csv file and putting the adult cardio cases in
 
-open('cardio_case.csv', 'w', newline='') as file:
-   writer.writerows(cardio_case)
-f.close()    
+with open('cardio_case.csv', 'w', newline='') as file:
+    w = csv.writer(file)
+    writer.writerows(cardio_case)
+    w.writerow(['id', 'provider', 'age', 'sex', 'state', 'visittype', 'weight', 'height', 'heartrate', 'respiration', 'blood pressure', 'temperature','triglycerides', 'HDL', 'LDL', 'total cholesterol', 'CRP', 'disease at admission', 'comorbities', 'risk score', 'overall risk'])
+    for f in cardio_case:
+       w.writerow([f.id, f.provider, f.age, f.sex, f.state, f.visittype, f.weight, f.height, f.heart_rate, f.respiration, f.blood_pressure, f.temperature, f.triglycerides, f.HDL, f.LDL, f.total_cholesterol, f.CRP, f._disease_at_admission, f._comorbities, f.risk_score, f.Risk])
