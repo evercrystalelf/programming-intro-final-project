@@ -27,41 +27,47 @@ with open('patients.csv', 'w', newline='') as file:
 
 #laboratory_tests = ['triglycerides', 'HDL', 'LDL', 'total_cholesterol', 'CRP']
 
-triglycerides = random.randint(35,200) #mg/dL
+#triglycerides = random.randint(35,200) #mg/dL
 
-HDL = random.randint(20,100) #mg/dL
+#HDL = random.randint(20,100) #mg/dL
 
-LDL = random.randint(40,190) #mg/dL
+#LDL = random.randint(40,190) #mg/dL
 
-total_cholesterol = random.randint(100,300) #mg/dL
+#total_cholesterol = random.randint(100,300) #mg/dL
 
-CRP = random.randint(0,12) #mg/L
+#CRP = random.randint(0,12) #mg/L
 
 _disease_at_admission = ['stroke', 'hernia', 'macular degeneration', 'tuberculosis', 'colitis']
 
 _comorbidities = ['COPD', 'cancer', 'diabetes', 'osteoarthritis', 'depression']
 
-class Adult:
-    def __init__(self):
-        self.triglycerides = random.randint(35,200)
-        self.HDL = random.randint(20,100)
-        self.LDL = random.randint(40,190)
-        self.total_cholesterol = random.randint(100,300)
-        self.CRP = random.randint(0,12)
-        self.disease = random.choice(_disease_at_admission)
+class Adult:   # creating a class called Adult
+    def __init__(self):   # constructing the objet
+        self.triglycerides = random.randint(35,200) #mg/dL
+        self.HDL = random.randint(20,100) #mg/dL
+        self.LDL = random.randint(40,190) #mg/dL
+        self.total_cholesterol = random.randint(100,300) #mg/dL
+        self.CRP = random.randint(0,12) # mg/L
+        self.disease = random.choice(_disease_at_admission) 
         self.comorbidities = random.choice(_comorbidities)
+     
+    def __str__(self):
+        return f'Triglycerides: {self.triglycerides}, HDL: {self.HDL}, LDL: {self.LDL}, Total Cholesterol: {self.total_cholesterol}, CRP: {self.CRP}, Disease at Admission: {self.disease_at_admission}, Comorbidities: {self.comorbidities})'
 
+    def __repr__(self):
+        return str(self)
+    
         # for each patient of the 300 that qualify as "adult" genertate values for their laboratory_tests, 
-        # _disease_at_admission and _comorbidities and add it to the patient's file This will be a for/if block
+        # _disease_at_admission and _comorbidities and add it to the patient's file
 
-        cardio_case = []  # opening a new empty list for adults only
-
-        cardio_case.append(list(filter(lambda x: x.age >= 12, patients))) #get all the adults into a list
+ cardio_case = []  # opening a new empty list for adults only
+     
+ cardio_case.append(list(filter(lambda x: x.age >= 12, patients))) #get all the adults into the list
 
         #tacking on laboratory_test values
-
-        for file in cardio_case:
-            cardio_case.append(triglycerides{self.triglycerides}, HDL{self.HDL}, LDL{self.LDL}, total_cholesterol{self.total_cholesterol}, CRP{self.CRP}, disease_at_admission{self.disease_at_admission}, comorbidities{self.comorbidities})
+    
+ for file in cardio_case:
+     cardio_case.append(Adult)
         
                 
         # now to use the laboratory_test values to asses the risk value for cardivascular disease.
