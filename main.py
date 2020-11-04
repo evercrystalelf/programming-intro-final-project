@@ -9,16 +9,21 @@ patients = []
 for i in range(0, 300):
     p = patient.Patient()
     patients.append(p)
-    
+
 # print the whole list, the items in the patients list are all patient.Patient
 print(patients)
 # demonstrate an example to filter for a specific requirement
 print(list(filter(lambda x: x.age >= 12, patients)))
 #print(patients)
 
-open('patients.csv', 'w', newline='') as file:
-   writer.writerows(patients)
-f.close()    
+with open('patients.csv', 'w', newline='') as file:
+    # writer for writing the csv rows in the file
+    w = csv.writer(file)
+    # use writerow to write the header in csv file
+    w.writerow(['id', 'provider', 'age', 'sex', 'state', 'visittype', 'weight', 'height', 'heartrate', 'respiration', 'blood pressure', 'temperature'])
+    # write every patinet to the csv file
+    for p in patients:
+        w.writerow([p.id, p.provider, p.age, p.sex, p.state, p.visittype, p.weight, p.height, p.heart_rate, p.respiration, p.blood_pressure, p.temperature])
 
 #laboratory_tests = ['triglycerides', 'HDL', 'LDL', 'total_cholesterol', 'CRP']
 
@@ -46,27 +51,27 @@ class Adult:
         self.disease = random.choice(_disease_at_admission)
         self.comorbidities = random.choice(_comorbidities)
 
-# for each patient of the 300 that qualify as "adult" genertate values for their laboratory_tests, 
-# _disease_at_admission and _comorbidities and add it to the patient's file This will be a for/if block
+        # for each patient of the 300 that qualify as "adult" genertate values for their laboratory_tests, 
+        # _disease_at_admission and _comorbidities and add it to the patient's file This will be a for/if block
 
-cardio_case = []  # opening a new empty list for adults only
+        cardio_case = []  # opening a new empty list for adults only
 
-cardio_case.append(list(filter(lambda x: x.age >= 12, patients))) #get all the adults into a list
+        cardio_case.append(list(filter(lambda x: x.age >= 12, patients))) #get all the adults into a list
 
-#tacking on laboratory_test values
+        #tacking on laboratory_test values
 
-for file in cardio_case:
-    cardio_case.append(triglycerides{self.triglycerides}, HDL{self.HDL}, LDL{self.LDL}, total_cholesterol{self.total_cholesterol}, CRP{self.CRP}, disease_at_admission{self.disease_at_admission}, comorbidities{self.comobidities})
-  
+        for file in cardio_case:
+            cardio_case.append(triglycerides{self.triglycerides}, HDL{self.HDL}, LDL{self.LDL}, total_cholesterol{self.total_cholesterol}, CRP{self.CRP}, disease_at_admission{self.disease_at_admission}, comorbidities{self.comorbidities})
         
-# now to use the laboratory_test values to asses the risk value for cardivascular disease.
-# This will be done by assigning points, once the points are added the risk score which we define will be retuned
-# a point will be given for each value meeting the following:
-# total_cholesterol > 200
-# LDL > 100
-# HDL for men < 40, for women < 50
-# triglycerides > 150
-# CRP > 2
+                
+        # now to use the laboratory_test values to asses the risk value for cardivascular disease.
+        # This will be done by assigning points, once the points are added the risk score which we define will be retuned
+        # a point will be given for each value meeting the following:
+        # total_cholesterol > 200
+        # LDL > 100
+        # HDL for men < 40, for women < 50
+        # triglycerides > 150
+        # CRP > 2
 
 def risk_score ():
     points = 0   #setting itteration value to 0 for addition
