@@ -12,9 +12,7 @@ for i in range(0, 300):
 
 # print the whole list, the items in the patients list are all patient.Patient
 print(patients)
-# demonstrate an example to filter for a specific requirement
-print(list(filter(lambda x: x.age >= 12, patients)))
-#print(patients)
+
 
 with open('patients.csv', 'w', newline='') as file:
     # writer for writing the csv rows in the file
@@ -76,9 +74,9 @@ for i in range(300): # all lists in list
     if int(middleman[i][2]) >= 12: # if index 2 of each list is adult
         cardio_case.append(middleman[i]) # add the list to cardio_case
         
-for i in range (len(cardio_case)):
-    c = Adult()
-    cardio_case.append(c)          
+for i in range(len(cardio_case)):
+    case = Adult()
+    cardio_case[i].append(case)            
         
                 
         # now to use the laboratory_test values to asses the risk value for cardivascular disease.
