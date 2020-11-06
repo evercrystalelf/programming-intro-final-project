@@ -76,6 +76,10 @@ for i in range(300): # all lists in list
     if int(middleman[i][2]) >= 12: # if index 2 of each list is adult
         cardio_case.append(middleman[i]) # add the list to cardio_case
         
+for i in range (len(cardio_case)):
+    c = Adult()
+    cardio_case.append(c)          
+        
                 
         # now to use the laboratory_test values to asses the risk value for cardivascular disease.
         # This will be done by assigning points, once the points are added the risk score which we define will be retuned
