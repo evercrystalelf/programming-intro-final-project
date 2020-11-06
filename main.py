@@ -60,15 +60,21 @@ class Adult:   # creating a class called Adult
         # for each patient of the 300 that qualify as "adult" genertate values for their laboratory_tests, 
         # _disease_at_admission and _comorbidities and add it to the patient's file
 
- cardio_case = []  # opening a new empty list for adults only
-     
- cardio_case.append(list(filter(lambda x: x.age >= 12, patients))) #get all the adults into the list
+middleman = [] # opening any empty list to put in all the adult patients
 
-        #tacking on laboratory_test values
-    
- for file in cardio_case: 
-    file = [(Adult())]
-    cardio_case.append(file)
+with open("patients.csv", 'r') as csvfile: # opening paitents file 
+    csvreader = csv.reader(csvfile) # making a reader object
+    for row in csvreader:  # adding each line as an element in middleman
+        middleman.append(row)  
+        
+middleman.pop(0) #removing the header row
+
+cardio_case=[] #opening an empty list to put the adult patients in
+
+
+for i in range(300): # all lists in list
+    if int(middleman[i][2]) >= 12: # if index 2 of each list is adult
+        cardio_case.append(middleman[i]) # add the list to cardio_case
         
                 
         # now to use the laboratory_test values to asses the risk value for cardivascular disease.
