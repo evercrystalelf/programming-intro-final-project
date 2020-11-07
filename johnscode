@@ -1,0 +1,85 @@
+import random
+import csv
+# import patient module
+from patient import patient
+
+# create an empty patients list
+patients = []
+# create 300 patients by using Patinet class in patient module
+for i in range(0, 300):
+    p = patient.Patient()
+    patients.append(p)
+
+# print the whole list, the items in the patients list are all patient.Patient
+#print(patients)
+
+
+with open('patients.csv', 'w', newline='') as file:
+    # writer for writing the csv rows in the file
+    w = csv.writer(file)
+    # use writerow to write the header in csv file
+    w.writerow(['id', 'provider', 'age', 'sex', 'state', 'visittype', 'weight', 'height', 'heartrate', 'respiration', 'blood pressure', 'temperature'])
+    # write every patinet to the csv file
+    for p in patients:
+        w.writerow([p.id, p.provider, p.age, p.sex, p.state, p.visittype, p.weight, p.height, p.heart_rate, p.respiration, p.blood_pressure, p.temperature])
+file.close()
+
+cardio_case=[]
+
+with open('patients.csv', 'r') as file2:
+    for line in csv.DictReader(file2):
+        cardio_case.append(line)
+file2.close()
+
+adults=[]
+for i in range(len(cardio_case)): 
+    if int(cardio_case[i]['age']) >= 12: 
+        adults.append(cardio_case[i])
+ 
+
+_disease_at_admission = ['stroke', 'hernia', 'macular degeneration', 'tuberculosis', 'colitis']
+
+_comorbidities = ['COPD', 'cancer', 'diabetes', 'osteoarthritis', 'depression']
+
+class Adult:   # creating a class called Adult
+    def __init__(self):   # constructing the objet
+        self.triglycerides = random.randint(35,200) #mg/dL
+        self.HDL = random.randint(20,100) #mg/dL
+        self.LDL = random.randint(40,190) #mg/dL
+        self.total_cholesterol = random.randint(100,300) #mg/dL
+        self.CRP = random.randint(0,12) # mg/L
+        self.disease = random.choice(_disease_at_admission) 
+        self.comorbidities = random.choice(_comorbidities)
+     
+    def __str__(self):
+        return f'Triglycerides: {self.triglycerides}, HDL: {self.HDL}, LDL: {self.LDL}, Total Cholesterol: {self.total_cholesterol}, CRP: {self.CRP}, Disease at Admission: {self.disease}, Comorbidities: {self.comorbidities})'
+
+    def __repr__(self):
+        return str(self)
+add_case = []
+
+for i in range(0, len(adults)):
+    a = Adult() 
+    add_case.append(a)
+
+with open('adultheartcases.csv', 'w', newline='') as file:
+    # writer for writing the csv rows in the file
+    w = csv.writer(file)
+    # use writerow to write the header in csv file
+    w.writerow(['Triglycerides','HDL','LDL','Total Cholesterol','CRP','Disease at Admission','Comorbidities'])
+    for a in add_case:
+        w.writerow([a.triglycerides, a.HDL, a.LDL, a.total_cholesterol, a.CRP, a.disease, a.comorbidities]) 
+file.close()
+
+add_case2 =[]
+with open('adultheartcases.csv', 'r') as file2:
+    for line in csv.DictReader(file2):
+        add_case2.append(line)
+file2.close()
+
+def Merge(dict1, dict2):
+    res = {**dict1, **dict2}
+    return res
+
+for i in range(0,len(adults)):
+    adults[i]=Merge(adults[i],add_case2[i])
