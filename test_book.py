@@ -69,35 +69,32 @@ for i in range(300): # all lists in list
     if int(middleman[i][2]) >= 12: # if index 2 of each list is adult
         cardio_case.append(middleman[i]) # add the list to cardio_case
 
-def risk_score ():
-    points = 0   #setting itteration value to 0 for addition
-    
-    for f in (len(cardio_case)):                           
+points = 0
+
+for f in range(300):                           
                                
-        if cardio_case[12] > 150: # if the value meets the condition
+    if int(cardio_case[f][12]) > 150: # if the value meets the condition
             points+=1          # a point is added
     
-        if cardio_case[3] == M and cardio_case[13] < 40:
+    if cardio_case[f][3] == 'M' and int(cardio_case[f][13]) < 40:
             points+=1
             
-            
-        if cardio_case[3] == F and cardio_case[13] <50:
+    if cardio_case[f][3] == 'F' and int(cardio_case[f][13]) <50:
             points+=1
    
-        if cardio_case[14] > 100:
+    if int(cardio_case[f][14]) > 100:
             points+=1
     
-        if cardio_case[15] > 200:
+    if int(cardio_case[f][15]) > 200:
             points+=1
     
-        if cardio_case[16] > 2:
+    if int(cardio_case[f][16]) > 2:
             points+=1
     
-    risk_score = points # the total points
+    risk_score = str(points) # the total points
     
-    cardio_case = f.cardio_case.append(risk_score) # adding the point total to the adult patients
+    cardio_case.append(risk_score) # adding the point total to the adult patients
 
-risk_score()    
     
 def Risk ():      # assigning each total point possibliity to a risk estimation
     for item in (len(cardio_case)):
