@@ -91,9 +91,9 @@ for f in range(len(cardio_case)):
     if int(cardio_case[f][16]) > 2:
             points+=1
     
-    risk_score = str(points) # the total points
     
-    cardio_case.append(risk_score) # adding the point total to the adult patients
+    cardio_case[f].append(points) # adding the point total to the adult patients
+
 
     
 def Risk ():      # assigning each total point possibliity to a risk estimation
