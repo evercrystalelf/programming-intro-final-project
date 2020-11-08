@@ -92,7 +92,7 @@ for f in range(len(cardio_case)):
             points+=1
     
     
-    cardio_case[f].append(points) # adding the point total to the adult patients
+    cardio_case[f].append(str(points)) # adding the point total to the adult patients
 
 
     
