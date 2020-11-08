@@ -83,3 +83,53 @@ def Merge(dict1, dict2):
 
 for i in range(0,len(adults)):
     adults[i]=Merge(adults[i],add_case2[i])
+  
+
+    
+points = 0   #setting itteration value to 0 for addition
+
+for i in range(0,len(adults)):
+    points=0
+            
+    if adults[i]['sex'] == 'M' and int(adults[i]['HDL']) < 40:
+            points+=1
+    
+
+    if int(adults[i]['Triglycerides']) > 150:
+            points+=1          
+
+    if adults[i]['sex'] == 'F' and int(adults[i]['HDL']) < 50:
+            points+=1
+                    
+    if int(adults[i]['LDL']) > 100:
+            points+=1
+    
+    if int(adults[i]['Total Cholesterol']) > 200:
+            points+=1
+    
+    if int(adults[i]['CRP']) > 2:
+            points+=1
+    adults[i]['score']= points
+
+
+for i in range(0,len(adults)):
+    if adults[i]['score']==0:
+        adults[i]['Risk']= 'low'
+    if adults[i]['score']==1:
+        adults[i]['Risk']= 'mild'
+    if adults[i]['score']==2:
+        adults[i]['Risk']= 'moderate'
+    if adults[i]['score']==3:
+        adults[i]['Risk']= 'moderate high'
+    if adults[i]['score']==4:
+        adults[i]['Risk']= 'high'
+    if adults[i]['score']==5:
+        adults[i]['Risk']= 'major'
+
+field_names=['id', 'provider', 'age', 'sex', 'state', 'visittype', 'weight', 'height', 'heartrate', 'respiration', 'blood pressure', 'temperature','Triglycerides','HDL','LDL','Total Cholesterol','CRP','Disease at Admission','Comorbidities','score','Risk']
+
+with open ('patient_with_cardio_case.csv', 'w') as file:
+    writer = csv.DictWriter(file, fieldnames = field_names)
+    writer.writeheader() 
+    writer.writerows(adults)
+file.close()
