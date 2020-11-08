@@ -96,29 +96,22 @@ for f in range(len(cardio_case)):
 
 
     
-def Risk ():      # assigning each total point possibliity to a risk estimation
-    for item in (len(cardio_case)):
-        if cardio_case[19] == 0:
-            Risk = low
-        if cardio_case[19] == 1:
-            Risk = mild
-        if cardio_case[19] == 2:
-            Risk = moderate
-        if cardio_case[19] == 3:
-            Risk = moderate_high
-        if cardio_case[19] == 4:
-            Risk = high
-        if cardio_case[19] == 5:
-            Risk = major
-    cardio_case = item.cardio_case.append(Risk)
+for n in range(len(cardio_case)):
     
-Risk()    
-    
-print(len(cardio_case))
-
-print(type(cardio_case))
-
-print(cardio_case[0])
+    if int(cardio_case[n][19]) == 0:
+             Risk = 'low'
+    if int(cardio_case[n][19]) == 1:
+             Risk = 'mild'
+    if int(cardio_case[n][19]) == 2:
+             Risk = 'moderate'
+    if int(cardio_case[n][19]) == 3:
+             Risk = 'moderate high'
+    if int(cardio_case[n][19]) == 4:
+             Risk = 'high'
+    if int(cardio_case[n][19]) == 5:
+             Risk = 'major'
+            
+    cardio_case[n].append(Risk)
 
 
       
