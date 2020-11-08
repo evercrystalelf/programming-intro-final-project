@@ -69,9 +69,11 @@ for i in range(300): # all lists in list
     if int(middleman[i][2]) >= 12: # if index 2 of each list is adult
         cardio_case.append(middleman[i]) # add the list to cardio_case
 
-points = 0
 
-for f in range(len(cardio_case)):                           
+
+for f in range(len(cardio_case)): 
+    
+    points = 0
                                
     if int(cardio_case[f][12]) > 150: # if the value meets the condition
             points+=1          # a point is added
