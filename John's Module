@@ -1,0 +1,45 @@
+import csv
+import numpy as np
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+
+empty_list=[]
+women_under_65=[]
+women_over_65=[]
+men_under_65=[]
+men_over_65=[]
+
+df=pd.read_csv('patient_with_cardio_case.csv')
+women_under_65df=df[(df['age']<65)&(df['sex']=='F')]
+women_over_65df=df[(df['age']>=65)&(df['sex']=='F')]
+men_under_65df=df[(df['age']<65)&(df['sex']=='M')]
+men_over_65df=df[(df['age']>=65)&(df['sex']=='M')]
+
+def print_stats(df, dfs, string):
+    print('%s  :\n Min: %d\n Max: %d'% (dfs, df[string].min(), df[string].max()))
+    print(' Average: %f' % df[string].mean())
+    print(' Quartiles:\n%s \n' % df[string].quantile([.25, .5, .75, 1]).to_string())
+
+print_stats(women_under_65df,'women_under_65' ,'HDL')
+
+def counts(string):
+    print('%s \n' % df.groupby(string)['id'].count().to_string())
+counts('Disease at Admission')
+counts('state')
+counts('visittype')
+counts('Comorbidities')
+
+
+
+def graphsea(string):
+    fig, axs = plt.subplots(ncols=4, sharey=True)
+    sns.boxplot(x=women_under_65df[string], ax=axs[0], orient='v').set(xlabel='women_under_65', ylabel=string)
+    sns.boxplot(x=women_over_65df[string], ax=axs[1], orient='v').set(xlabel='women_over_65', ylabel='')
+    sns.boxplot(x=men_under_65df[string], ax=axs[2], orient='v').set(xlabel='men_under_65', ylabel='')
+    sns.boxplot(x=men_over_65df[string], ax=axs[3], orient='v').set(xlabel='men_over_65', ylabel='')
+graphsea('HDL')
+graphsea('LDL')
+graphsea('Total Cholesterol')
+graphsea('CRP')
+graphsea('heartrate')
