@@ -22,6 +22,9 @@ def print_stats(df, dfs, string):
     print(' Quartiles:\n%s \n' % df[string].quantile([.25, .5, .75, 1]).to_string())
 
 print_stats(women_under_65df,'women_under_65' ,'HDL')
+print_stats(women_over_65df,'women_over_65' ,'HDL')
+print_stats(men_under_65df,'men_under_65' ,'HDL')
+print_stats(men_over_65df,'men_over_65' ,'HDL')
 
 def counts(string):
     print('%s \n' % df.groupby(string)['id'].count().to_string())
