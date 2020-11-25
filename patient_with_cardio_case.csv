@@ -1,0 +1,267 @@
+id,provider,age,sex,state,visittype,weight,height,heartrate,respiration,blood pressure,temperature,Triglycerides,HDL,LDL,Total Cholesterol,CRP,Disease at Admission,Comorbidities,score,Risk
+17402,5,36,F,Idaho,nursing facility,105,58,98,15,"(110, 78)",97.74727633944508,195,38,134,288,0,colitis,cancer,4,high
+17403,8,19,F,Idaho,emergency,241,67,81,14,"(124, 78)",97.53535190488715,143,21,132,120,9,stroke,cancer,3,moderate high
+17404,1,88,F,Colorado,primary care,131,65,92,16,"(123, 85)",99.46023347330933,197,73,169,230,12,tuberculosis,COPD,4,high
+17405,8,28,F,Colorado,nursing facility,179,67,93,13,"(110, 73)",98.48806939959763,141,38,182,204,6,macular degeneration,depression,4,high
+17406,5,15,M,Alaska,emergency,136,61,84,16,"(130, 75)",99.35136158495426,180,44,146,107,7,tuberculosis,depression,3,moderate high
+17407,6,46,F,Colorado,specialist,220,76,65,14,"(131, 72)",97.87140100770154,149,42,84,271,1,tuberculosis,depression,2,moderate
+17408,5,15,F,New York,hospital inpatient,137,58,95,15,"(121, 78)",97.92526559450307,173,44,139,117,0,macular degeneration,osteoarthritis,3,moderate high
+17409,8,22,F,Utah,emergency,225,76,75,14,"(116, 75)",99.08398852835735,172,84,169,257,3,tuberculosis,diabetes,4,high
+17410,6,95,M,Alaska,nursing facility,190,63,80,12,"(111, 69)",97.73575661562394,71,53,121,282,3,macular degeneration,osteoarthritis,3,moderate high
+17411,9,57,F,Alaska,primary care,165,76,76,16,"(122, 68)",97.51398209001208,48,61,154,235,1,macular degeneration,COPD,2,moderate
+17412,2,72,M,Alaska,emergency,142,72,97,15,"(125, 69)",99.59055135277404,50,40,83,287,6,macular degeneration,depression,2,moderate
+17413,10,85,M,Maine,nursing facility,181,74,99,13,"(121, 79)",98.74696490022247,125,43,153,120,4,tuberculosis,cancer,2,moderate
+17414,8,25,F,California,specialist,235,66,76,15,"(127, 83)",98.60641041480706,159,98,90,256,5,tuberculosis,osteoarthritis,3,moderate high
+17415,4,57,M,Ohio,nursing facility,273,71,76,14,"(119, 69)",97.56002585403145,159,95,85,103,2,colitis,depression,1,mild
+17416,10,98,M,Maine,hospital inpatient,169,71,96,14,"(122, 84)",99.04494433314464,129,30,45,218,9,stroke,COPD,3,moderate high
+17417,6,37,F,North Carolina,primary care,198,70,66,17,"(134, 84)",99.15651316036131,79,99,157,118,3,stroke,diabetes,2,moderate
+17418,4,73,M,Maine,primary care,143,61,77,15,"(129, 70)",98.1594742462109,53,58,40,106,6,colitis,depression,1,mild
+17419,7,75,M,Utah,emergency,114,61,74,12,"(115, 77)",97.71802730879305,188,53,53,256,8,colitis,cancer,3,moderate high
+17420,10,21,M,Colorado,hospital inpatient,125,61,98,12,"(113, 72)",97.72724635836859,38,26,190,218,3,hernia,osteoarthritis,4,high
+17421,9,17,F,Colorado,nursing facility,122,66,79,14,"(117, 72)",97.72510113339631,130,94,113,205,8,hernia,depression,3,moderate high
+17422,9,20,M,North Carolina,nursing facility,129,58,82,18,"(113, 85)",97.83823153711384,133,63,101,204,2,tuberculosis,diabetes,2,moderate
+17423,4,36,F,North Carolina,nursing facility,136,71,88,12,"(131, 70)",99.0431898653242,111,57,82,199,8,colitis,cancer,1,mild
+17424,9,27,F,North Carolina,hospital inpatient,144,72,92,12,"(122, 65)",99.2069687818391,170,57,72,286,10,macular degeneration,osteoarthritis,3,moderate high
+17425,1,74,M,Colorado,nursing facility,207,75,77,14,"(130, 72)",99.057010557137,136,71,42,211,12,tuberculosis,depression,2,moderate
+17426,8,22,M,Ohio,nursing facility,139,65,75,12,"(125, 68)",98.04043816897659,191,58,162,194,7,macular degeneration,osteoarthritis,3,moderate high
+17427,7,33,M,Utah,specialist,155,58,90,12,"(110, 65)",99.04354600479228,79,58,75,120,7,macular degeneration,diabetes,1,mild
+17428,8,40,M,California,specialist,199,66,80,18,"(121, 80)",97.78817444750531,91,26,186,281,4,stroke,cancer,4,high
+17430,1,93,M,Utah,nursing facility,189,67,66,13,"(131, 79)",97.43286951218667,172,65,112,193,9,colitis,osteoarthritis,3,moderate high
+17431,5,89,M,Ohio,specialist,311,76,63,16,"(129, 81)",97.59360791546712,126,61,111,276,9,colitis,COPD,3,moderate high
+17432,1,24,M,Texas,primary care,167,75,96,18,"(126, 83)",97.9811434309195,188,97,145,148,12,colitis,diabetes,3,moderate high
+17433,4,61,M,Idaho,emergency,211,63,84,15,"(117, 73)",98.55187390895006,181,78,56,122,9,tuberculosis,COPD,2,moderate
+17434,10,84,F,Ohio,hospital inpatient,196,63,80,16,"(125, 81)",99.12547333151801,124,53,46,104,7,macular degeneration,COPD,1,mild
+17435,10,79,M,North Carolina,hospital inpatient,257,71,71,12,"(117, 80)",98.80249962685737,152,46,74,130,10,tuberculosis,depression,2,moderate
+17436,9,47,M,Ohio,hospital inpatient,161,58,76,16,"(129, 70)",97.9719008018537,63,62,159,295,10,tuberculosis,depression,3,moderate high
+17437,8,68,M,California,nursing facility,203,75,93,15,"(118, 74)",98.95936560431991,77,66,45,108,6,hernia,osteoarthritis,1,mild
+17438,5,69,F,Alaska,nursing facility,266,73,91,13,"(124, 80)",97.5366225330443,93,33,40,211,9,macular degeneration,depression,3,moderate high
+17439,4,47,M,Utah,emergency,134,60,99,18,"(121, 77)",99.41577527096732,139,70,156,175,11,colitis,COPD,2,moderate
+17440,9,64,F,California,nursing facility,271,76,87,18,"(135, 67)",97.65892449534253,173,49,64,163,1,tuberculosis,COPD,2,moderate
+17441,3,63,F,California,nursing facility,146,70,83,15,"(113, 81)",99.51090173594164,41,61,155,298,10,hernia,cancer,3,moderate high
+17442,3,45,F,Texas,primary care,118,62,60,15,"(119, 77)",97.89398983873377,155,28,168,227,10,colitis,COPD,5,major
+17443,3,32,M,Texas,emergency,148,67,91,14,"(134, 75)",98.52272094652977,187,64,103,246,3,colitis,osteoarthritis,4,high
+17444,5,70,F,Texas,primary care,255,69,72,12,"(127, 85)",97.54871675860637,156,78,90,114,1,macular degeneration,diabetes,1,mild
+17445,8,29,M,Alaska,nursing facility,168,72,72,16,"(127, 66)",97.68123165213396,99,85,120,128,10,tuberculosis,cancer,2,moderate
+17446,5,20,M,Maine,primary care,213,68,92,17,"(115, 83)",98.99987185225373,128,73,110,217,5,tuberculosis,diabetes,3,moderate high
+17447,8,46,M,Utah,primary care,202,63,99,14,"(132, 79)",98.30112697294656,139,37,56,244,1,macular degeneration,osteoarthritis,2,moderate
+17448,1,97,M,California,specialist,234,70,84,15,"(121, 73)",98.84339803626025,149,49,47,245,11,stroke,COPD,2,moderate
+17449,8,18,M,New York,specialist,233,74,74,15,"(131, 68)",98.25262684258853,191,89,127,156,2,colitis,cancer,2,moderate
+17450,8,27,F,California,nursing facility,167,59,87,14,"(129, 68)",99.28741181499865,54,93,59,205,12,tuberculosis,cancer,2,moderate
+17451,9,52,M,Idaho,hospital inpatient,171,68,83,18,"(113, 73)",97.53866291948052,52,63,138,223,10,macular degeneration,cancer,3,moderate high
+17452,10,57,F,California,hospital inpatient,191,61,92,14,"(134, 76)",97.42845080794643,64,71,72,200,10,macular degeneration,depression,1,mild
+17453,9,83,F,Texas,primary care,128,66,76,18,"(117, 71)",99.0604517152884,41,38,57,178,12,hernia,osteoarthritis,2,moderate
+17454,3,90,F,Idaho,hospital inpatient,145,58,79,12,"(111, 81)",97.631920887197,146,42,102,206,4,tuberculosis,diabetes,4,high
+17455,8,28,F,Utah,nursing facility,229,65,67,15,"(130, 74)",97.43874001005331,61,27,118,247,7,stroke,depression,4,high
+17456,10,15,M,California,emergency,113,62,99,14,"(127, 76)",99.3627562393071,164,97,121,127,5,macular degeneration,diabetes,3,moderate high
+17457,4,81,F,California,nursing facility,187,71,60,12,"(122, 75)",98.93319480560781,99,32,135,227,5,stroke,osteoarthritis,4,high
+17458,1,57,F,Colorado,primary care,104,60,90,17,"(114, 76)",97.75519059549399,160,77,163,243,2,tuberculosis,cancer,3,moderate high
+17460,10,17,M,North Carolina,specialist,202,74,87,16,"(129, 67)",97.58008775492218,99,75,64,156,3,hernia,depression,1,mild
+17461,2,85,F,Alaska,emergency,141,61,90,15,"(131, 84)",98.63193723320293,41,56,103,121,1,hernia,diabetes,1,mild
+17463,5,39,M,Maine,nursing facility,104,59,65,18,"(134, 70)",99.48671263304905,94,45,69,163,12,macular degeneration,depression,1,mild
+17464,6,51,F,Texas,primary care,159,71,73,15,"(114, 71)",97.82788795197678,167,54,124,293,5,hernia,diabetes,4,high
+17465,10,97,M,Ohio,primary care,175,64,97,16,"(110, 85)",99.44625380010045,57,30,155,128,12,tuberculosis,diabetes,3,moderate high
+17466,1,27,M,Maine,hospital inpatient,165,76,74,13,"(133, 82)",97.65887368121793,181,51,163,222,1,stroke,osteoarthritis,3,moderate high
+17468,6,60,M,Maine,nursing facility,233,69,82,14,"(132, 67)",99.39680842900995,186,79,126,131,6,stroke,cancer,3,moderate high
+17469,2,98,F,Alaska,nursing facility,191,71,60,15,"(120, 76)",99.5896883350741,63,95,140,149,9,tuberculosis,depression,2,moderate
+17470,1,82,M,New York,primary care,121,66,92,17,"(124, 84)",98.17488641788266,116,36,144,148,12,stroke,COPD,3,moderate high
+17471,1,92,F,North Carolina,hospital inpatient,143,60,99,18,"(111, 66)",98.86762401947725,192,74,139,203,2,macular degeneration,depression,3,moderate high
+17472,3,57,F,Texas,primary care,110,58,74,15,"(131, 71)",99.00667590233493,178,43,136,297,8,tuberculosis,osteoarthritis,5,major
+17473,8,50,F,Ohio,hospital inpatient,128,60,82,18,"(133, 84)",97.62859821471142,93,61,163,149,6,stroke,osteoarthritis,2,moderate
+17474,7,30,M,California,nursing facility,175,75,69,13,"(110, 71)",98.2193486188701,50,65,149,240,2,macular degeneration,depression,2,moderate
+17476,9,61,M,California,primary care,269,75,70,14,"(111, 79)",98.74905181596702,59,85,113,154,8,hernia,cancer,2,moderate
+17477,4,36,F,Ohio,hospital inpatient,127,58,80,12,"(113, 72)",97.88193335012267,163,94,75,131,5,stroke,COPD,2,moderate
+17478,1,41,F,California,emergency,163,72,89,17,"(129, 66)",97.59261016240958,97,69,173,265,3,macular degeneration,cancer,3,moderate high
+17479,1,59,F,North Carolina,specialist,164,71,89,17,"(125, 65)",97.71029305381032,173,26,104,152,9,macular degeneration,COPD,4,high
+17481,7,24,F,Idaho,hospital inpatient,145,65,63,12,"(113, 72)",97.96261665206876,101,57,142,145,0,macular degeneration,osteoarthritis,1,mild
+17482,3,49,M,New York,nursing facility,196,62,84,16,"(132, 80)",97.48332810247668,89,87,137,201,1,hernia,cancer,2,moderate
+17483,8,52,F,California,hospital inpatient,179,62,76,18,"(112, 82)",98.07037687689191,52,23,150,248,11,tuberculosis,osteoarthritis,4,high
+17484,1,91,F,Ohio,hospital inpatient,269,72,60,14,"(116, 74)",97.7048952812429,196,51,153,145,10,macular degeneration,depression,3,moderate high
+17485,9,53,F,Ohio,primary care,120,64,74,17,"(119, 78)",97.70627355476303,103,54,176,146,12,hernia,COPD,2,moderate
+17486,9,52,M,Utah,primary care,184,60,77,17,"(114, 74)",98.0865526308469,80,95,180,296,3,hernia,cancer,3,moderate high
+17487,10,50,M,Colorado,nursing facility,144,72,99,12,"(132, 82)",98.22615362552956,115,69,166,166,12,stroke,diabetes,2,moderate
+17488,9,30,F,Alaska,primary care,180,63,76,15,"(134, 66)",97.68323388790957,69,64,153,258,6,stroke,COPD,3,moderate high
+17489,3,31,M,Texas,primary care,163,67,74,18,"(116, 73)",97.61625637765987,37,60,129,272,12,macular degeneration,cancer,3,moderate high
+17490,1,70,F,Colorado,primary care,161,73,65,12,"(111, 68)",97.40563479578165,52,86,128,134,5,tuberculosis,COPD,2,moderate
+17491,5,96,F,California,primary care,173,61,81,14,"(114, 85)",99.55082928116222,101,43,183,194,4,stroke,diabetes,3,moderate high
+17492,8,50,F,New York,emergency,179,67,76,14,"(111, 75)",98.01510822643844,66,41,105,116,11,tuberculosis,osteoarthritis,3,moderate high
+17493,6,87,F,Colorado,emergency,194,62,96,14,"(124, 76)",98.67409515317436,144,56,84,293,8,macular degeneration,COPD,2,moderate
+17494,4,91,M,Utah,emergency,147,63,91,18,"(115, 73)",99.29240460762391,137,90,106,231,11,stroke,osteoarthritis,3,moderate high
+17495,10,80,M,Ohio,specialist,156,68,95,13,"(122, 74)",97.46312542431704,129,43,127,158,5,colitis,depression,2,moderate
+17496,5,14,F,Maine,emergency,177,59,91,13,"(116, 77)",97.71082050866971,64,31,184,291,8,macular degeneration,cancer,4,high
+17497,6,96,F,Alaska,specialist,211,70,91,16,"(115, 71)",97.82382530623097,95,92,125,104,12,hernia,cancer,2,moderate
+17498,9,90,F,North Carolina,primary care,185,66,88,17,"(133, 67)",99.50998324153603,118,62,172,117,10,hernia,depression,2,moderate
+17499,2,95,M,Idaho,nursing facility,153,75,74,13,"(113, 84)",97.98799674860412,122,21,62,265,5,stroke,cancer,3,moderate high
+17501,9,65,F,Texas,hospital inpatient,188,61,93,14,"(129, 85)",99.10304423454266,109,79,179,126,4,tuberculosis,cancer,2,moderate
+17503,7,60,F,Alaska,emergency,187,61,69,15,"(123, 80)",98.46555844695735,197,94,100,110,8,hernia,cancer,2,moderate
+17504,5,18,M,Colorado,primary care,121,58,79,15,"(128, 65)",99.18303214639369,122,35,75,209,7,stroke,cancer,3,moderate high
+17505,10,21,F,Alaska,emergency,110,64,77,17,"(114, 77)",98.99434590629858,115,40,116,257,8,macular degeneration,depression,4,high
+17506,2,76,F,Utah,hospital inpatient,291,76,89,16,"(116, 66)",99.17928104387077,144,36,169,182,7,hernia,cancer,3,moderate high
+17509,5,64,F,Utah,nursing facility,169,62,65,12,"(131, 75)",98.20004420452129,141,63,176,232,6,macular degeneration,COPD,3,moderate high
+17511,6,47,F,Texas,hospital inpatient,233,66,84,17,"(115, 80)",98.37597247957584,152,37,54,132,11,stroke,cancer,3,moderate high
+17512,5,76,M,California,hospital inpatient,216,76,96,16,"(130, 69)",98.67854705953143,47,39,164,203,3,macular degeneration,depression,4,high
+17513,9,46,F,North Carolina,emergency,265,75,88,13,"(110, 73)",99.20196301869986,127,81,170,285,10,tuberculosis,cancer,3,moderate high
+17514,2,36,M,California,hospital inpatient,185,76,89,16,"(121, 83)",98.2551130175997,156,74,129,258,0,tuberculosis,cancer,3,moderate high
+17515,6,40,M,Colorado,hospital inpatient,135,69,62,17,"(120, 71)",98.61224232000882,177,53,60,160,10,macular degeneration,osteoarthritis,2,moderate
+17516,5,51,M,Ohio,specialist,164,73,76,18,"(125, 80)",99.5852699172895,183,50,182,149,3,colitis,COPD,3,moderate high
+17517,2,88,F,Maine,primary care,133,64,78,16,"(119, 65)",98.79725937143024,133,35,185,113,3,tuberculosis,depression,3,moderate high
+17518,9,28,F,Colorado,nursing facility,155,62,65,12,"(118, 74)",97.8194965307457,68,47,142,154,3,tuberculosis,depression,3,moderate high
+17520,4,78,M,Colorado,emergency,225,67,68,14,"(127, 75)",99.22355440558941,127,37,129,206,11,colitis,COPD,4,high
+17521,9,76,M,Maine,nursing facility,193,74,62,15,"(127, 70)",98.36676639126864,180,29,161,218,11,colitis,osteoarthritis,5,major
+17522,4,13,M,New York,nursing facility,232,68,64,16,"(127, 68)",99.46589062375138,167,58,141,200,11,colitis,cancer,3,moderate high
+17523,6,33,M,Maine,specialist,142,69,93,16,"(131, 80)",98.66128589840741,124,45,154,215,11,stroke,diabetes,3,moderate high
+17524,8,42,M,Maine,hospital inpatient,185,61,88,16,"(120, 66)",98.33715408996567,36,27,60,209,0,stroke,cancer,2,moderate
+17525,5,54,F,New York,nursing facility,177,59,93,15,"(130, 76)",98.43117458006846,76,38,50,211,11,stroke,COPD,3,moderate high
+17526,10,86,F,Colorado,specialist,201,70,74,13,"(130, 75)",97.93367624706976,165,38,84,228,12,colitis,COPD,4,high
+17527,7,17,F,Utah,nursing facility,141,62,66,17,"(129, 73)",99.04560446616675,171,96,56,144,11,hernia,diabetes,2,moderate
+17528,9,83,F,New York,nursing facility,202,61,71,18,"(134, 81)",98.15876583240188,43,25,61,243,5,colitis,diabetes,3,moderate high
+17529,9,68,M,Colorado,emergency,274,73,64,18,"(113, 85)",97.89039431274199,165,38,40,230,8,hernia,diabetes,4,high
+17533,10,78,M,North Carolina,hospital inpatient,189,76,95,17,"(123, 80)",98.2794302091385,97,59,180,201,2,stroke,diabetes,2,moderate
+17534,4,65,M,New York,emergency,204,75,87,16,"(116, 65)",99.24413820344415,88,22,69,277,0,hernia,osteoarthritis,2,moderate
+17535,10,82,F,Utah,emergency,172,65,80,15,"(119, 77)",98.478708143442,117,88,132,126,4,colitis,COPD,2,moderate
+17536,2,34,F,North Carolina,emergency,248,72,95,12,"(134, 66)",98.2836961528073,69,30,175,173,2,hernia,osteoarthritis,2,moderate
+17537,2,49,F,New York,emergency,157,68,91,18,"(135, 67)",97.50852540252772,66,52,126,282,2,hernia,cancer,2,moderate
+17539,5,65,M,Colorado,emergency,206,74,92,16,"(116, 84)",99.59580332055945,172,21,127,100,5,tuberculosis,cancer,4,high
+17540,4,41,M,Alaska,specialist,155,68,68,15,"(128, 85)",99.08533021923898,87,24,79,126,4,colitis,osteoarthritis,2,moderate
+17541,9,20,F,Ohio,emergency,182,69,65,15,"(120, 74)",99.5816892385377,139,66,140,123,0,macular degeneration,depression,1,mild
+17542,8,78,F,Idaho,nursing facility,126,58,81,16,"(117, 80)",97.6700768643433,104,82,109,296,5,macular degeneration,COPD,3,moderate high
+17543,10,26,M,Colorado,emergency,259,74,60,18,"(124, 84)",97.44223452332896,114,95,98,193,7,hernia,COPD,1,mild
+17544,6,50,F,Colorado,primary care,180,68,62,15,"(114, 65)",99.03378771861657,40,93,86,172,5,macular degeneration,COPD,1,mild
+17547,1,57,M,California,specialist,182,61,79,16,"(116, 69)",98.47097095175154,129,53,99,115,6,macular degeneration,cancer,1,mild
+17548,1,27,F,North Carolina,hospital inpatient,262,73,80,17,"(119, 83)",98.76200964583401,48,67,181,293,7,hernia,osteoarthritis,3,moderate high
+17549,2,84,F,North Carolina,emergency,212,67,95,18,"(126, 83)",98.79204572609072,42,52,151,283,6,hernia,cancer,3,moderate high
+17550,8,64,F,Ohio,hospital inpatient,208,71,74,14,"(119, 85)",97.84443470858923,161,89,119,207,2,hernia,diabetes,3,moderate high
+17551,6,31,F,New York,nursing facility,105,58,82,14,"(110, 78)",98.69245008206786,153,68,183,245,6,tuberculosis,cancer,4,high
+17553,10,50,M,Texas,specialist,234,75,75,15,"(117, 84)",99.22189852635505,112,84,117,150,9,colitis,diabetes,2,moderate
+17554,3,29,F,Maine,primary care,213,70,85,16,"(125, 77)",97.96864018598679,158,30,70,292,8,colitis,diabetes,4,high
+17555,2,14,M,Texas,nursing facility,150,69,80,14,"(124, 67)",99.25668236165623,105,56,175,153,1,stroke,osteoarthritis,1,mild
+17556,3,19,F,Ohio,hospital inpatient,268,73,86,12,"(125, 77)",98.95109493480551,132,25,131,124,12,colitis,cancer,3,moderate high
+17557,6,35,M,Maine,primary care,209,74,98,12,"(125, 69)",99.00245402666135,86,49,103,139,0,tuberculosis,COPD,1,mild
+17558,1,72,M,Texas,primary care,260,71,84,16,"(128, 72)",99.57482326475255,70,88,157,165,3,tuberculosis,diabetes,2,moderate
+17559,3,44,F,Maine,nursing facility,211,63,75,15,"(124, 82)",97.67642883634007,38,24,80,246,4,stroke,osteoarthritis,3,moderate high
+17560,4,64,M,Idaho,primary care,156,58,96,18,"(116, 85)",99.28954425258422,179,73,171,196,7,macular degeneration,COPD,3,moderate high
+17561,10,54,M,Alaska,nursing facility,188,74,84,15,"(123, 68)",99.10360272941935,52,66,48,143,2,colitis,osteoarthritis,0,low
+17562,1,90,M,Ohio,hospital inpatient,124,61,83,17,"(128, 67)",98.25027523087307,127,89,180,191,12,colitis,osteoarthritis,2,moderate
+17563,7,63,M,New York,emergency,277,75,74,12,"(112, 77)",98.91347649181955,145,25,159,239,5,tuberculosis,COPD,4,high
+17564,7,56,F,Maine,emergency,297,74,82,12,"(135, 78)",99.55588997799794,195,68,116,132,11,hernia,osteoarthritis,3,moderate high
+17565,7,82,M,Utah,nursing facility,291,73,82,14,"(127, 73)",97.92523318792401,122,27,178,219,12,tuberculosis,COPD,4,high
+17566,6,57,M,North Carolina,hospital inpatient,214,70,70,13,"(121, 80)",99.2343168303409,55,60,97,175,11,tuberculosis,depression,1,mild
+17567,10,29,F,Texas,emergency,286,75,91,15,"(129, 84)",98.89877182039751,185,22,41,170,11,stroke,cancer,3,moderate high
+17569,4,56,F,New York,specialist,223,69,89,15,"(122, 80)",99.08353673462285,177,81,73,107,12,hernia,osteoarthritis,2,moderate
+17571,2,80,M,Idaho,specialist,131,64,91,17,"(120, 67)",98.81275094196997,97,84,120,255,8,hernia,cancer,3,moderate high
+17572,3,87,F,Utah,specialist,277,76,92,14,"(130, 77)",98.27710662946966,160,52,126,248,3,colitis,COPD,4,high
+17573,7,32,F,Texas,nursing facility,232,72,94,12,"(112, 84)",98.94763125270633,107,24,181,171,0,hernia,diabetes,2,moderate
+17574,2,37,M,Texas,nursing facility,262,72,66,15,"(121, 79)",98.64145925284103,138,75,132,251,9,stroke,diabetes,3,moderate high
+17575,4,45,M,New York,emergency,293,74,78,15,"(113, 76)",97.80751253881071,120,64,185,194,11,tuberculosis,COPD,2,moderate
+17576,4,50,M,Alaska,specialist,244,73,85,16,"(123, 81)",98.23273696159501,143,57,106,226,1,stroke,diabetes,2,moderate
+17577,3,66,M,Alaska,nursing facility,304,75,75,16,"(124, 67)",99.37999024885978,51,60,128,273,11,stroke,cancer,3,moderate high
+17578,7,37,M,Texas,primary care,229,74,87,16,"(124, 71)",97.4052159737492,162,60,155,263,4,tuberculosis,cancer,4,high
+17579,2,43,F,Utah,primary care,139,61,90,15,"(129, 76)",99.37817927878679,107,40,103,251,4,tuberculosis,depression,4,high
+17580,10,96,M,New York,specialist,168,69,72,14,"(110, 70)",97.66318385706487,182,49,125,290,10,stroke,COPD,4,high
+17581,8,67,M,Ohio,emergency,224,66,88,17,"(131, 72)",98.11737596571095,140,86,135,240,5,stroke,depression,3,moderate high
+17582,1,58,F,Texas,emergency,294,74,97,13,"(121, 76)",97.63488093790768,64,67,138,275,6,colitis,COPD,3,moderate high
+17583,1,82,M,Utah,emergency,209,63,72,18,"(112, 85)",98.01885517046809,71,100,119,131,6,tuberculosis,diabetes,2,moderate
+17584,9,47,M,New York,hospital inpatient,253,75,100,12,"(121, 83)",98.97255452912371,189,23,98,155,10,colitis,depression,3,moderate high
+17585,7,58,F,Alaska,hospital inpatient,177,71,97,14,"(130, 81)",98.49067520303062,192,83,172,213,3,tuberculosis,COPD,4,high
+17586,5,13,M,Maine,specialist,203,66,93,14,"(116, 73)",98.80671602231193,79,47,69,160,0,hernia,cancer,0,low
+17587,9,61,M,Ohio,primary care,247,68,96,16,"(114, 65)",98.14736768205098,169,90,117,218,12,macular degeneration,diabetes,4,high
+17588,9,80,F,Ohio,hospital inpatient,211,71,60,18,"(127, 84)",99.04420431445713,179,90,55,199,7,hernia,osteoarthritis,2,moderate
+17589,6,41,M,Colorado,emergency,200,75,87,13,"(126, 65)",99.36668067232551,91,70,56,242,6,stroke,diabetes,2,moderate
+17590,10,90,F,North Carolina,nursing facility,205,67,84,12,"(135, 71)",98.90382982636424,57,74,91,185,1,stroke,osteoarthritis,0,low
+17591,1,22,M,North Carolina,hospital inpatient,200,65,74,16,"(113, 76)",97.79171425407453,118,52,139,109,1,hernia,osteoarthritis,1,mild
+17592,9,48,M,Ohio,hospital inpatient,293,75,88,13,"(122, 65)",98.02907019117804,77,54,147,295,0,hernia,COPD,2,moderate
+17593,6,93,F,North Carolina,emergency,194,68,68,16,"(121, 68)",97.54610546769248,112,67,149,109,8,stroke,diabetes,2,moderate
+17594,4,85,M,New York,specialist,129,65,72,14,"(118, 65)",98.2009036196852,46,48,166,151,3,macular degeneration,depression,2,moderate
+17595,2,76,M,North Carolina,hospital inpatient,187,64,100,17,"(118, 73)",98.53772496603513,111,50,173,162,2,stroke,depression,1,mild
+17596,5,14,F,Colorado,primary care,231,74,91,15,"(115, 85)",99.24132339553825,137,45,117,207,1,hernia,osteoarthritis,3,moderate high
+17597,1,88,M,New York,nursing facility,196,67,70,18,"(125, 82)",98.17304119424172,79,28,121,114,6,macular degeneration,COPD,3,moderate high
+17598,9,58,M,Texas,specialist,206,61,69,13,"(129, 70)",98.49879288115757,96,70,43,108,9,stroke,cancer,1,mild
+17599,8,93,M,New York,nursing facility,227,71,67,14,"(113, 78)",98.62909216269809,167,73,90,220,12,colitis,osteoarthritis,3,moderate high
+17601,6,49,M,Utah,primary care,287,74,79,17,"(117, 77)",99.20016391214803,102,29,112,171,9,macular degeneration,depression,3,moderate high
+17602,8,71,F,Utah,nursing facility,91,58,85,16,"(135, 73)",97.45463783460642,152,65,180,106,3,hernia,depression,3,moderate high
+17603,6,40,M,Idaho,hospital inpatient,292,73,80,13,"(118, 71)",97.63334167194766,168,91,44,223,12,stroke,osteoarthritis,3,moderate high
+17604,5,34,M,Maine,emergency,208,63,62,17,"(116, 75)",98.95727964583637,152,81,174,100,2,hernia,depression,2,moderate
+17605,1,83,F,Texas,emergency,236,76,89,18,"(119, 69)",98.28325113384354,93,61,102,100,8,stroke,COPD,2,moderate
+17606,7,89,F,Idaho,hospital inpatient,187,67,80,13,"(133, 79)",98.53040888267384,162,31,46,203,0,hernia,osteoarthritis,3,moderate high
+17607,6,24,M,Idaho,hospital inpatient,219,71,64,16,"(132, 71)",98.94936799985855,184,64,187,146,3,stroke,diabetes,3,moderate high
+17608,5,26,M,New York,nursing facility,238,67,99,14,"(124, 83)",97.47992629691757,154,55,74,288,0,macular degeneration,cancer,2,moderate
+17609,5,100,M,Colorado,nursing facility,230,68,98,17,"(110, 68)",97.84068012298667,71,73,86,117,6,hernia,COPD,1,mild
+17610,6,95,F,Texas,specialist,170,72,75,14,"(114, 85)",99.49041020504754,92,96,82,261,0,colitis,diabetes,1,mild
+17612,7,76,M,New York,nursing facility,170,75,88,18,"(113, 78)",97.76376157623358,87,81,134,138,5,tuberculosis,COPD,2,moderate
+17613,3,16,F,Maine,primary care,217,70,98,14,"(134, 77)",97.47463422455982,159,49,173,145,0,hernia,osteoarthritis,3,moderate high
+17614,1,21,M,Colorado,primary care,137,62,75,17,"(110, 74)",99.27712031980118,53,26,92,197,6,stroke,COPD,2,moderate
+17615,2,91,F,California,primary care,169,63,91,16,"(120, 70)",97.48580615161337,61,58,184,134,1,macular degeneration,osteoarthritis,1,mild
+17616,8,73,M,North Carolina,hospital inpatient,111,60,85,18,"(113, 81)",99.04665508509227,186,66,185,235,11,macular degeneration,COPD,4,high
+17617,9,79,M,New York,hospital inpatient,159,65,73,14,"(123, 79)",98.99517709946228,68,81,188,207,10,macular degeneration,depression,3,moderate high
+17619,9,51,M,Idaho,nursing facility,302,74,96,16,"(120, 71)",98.7495802225849,129,75,180,141,1,stroke,diabetes,1,mild
+17620,3,44,M,Maine,primary care,105,59,68,16,"(135, 79)",99.58981979837637,121,21,189,150,3,stroke,COPD,3,moderate high
+17621,9,99,M,Utah,emergency,148,74,73,12,"(113, 67)",97.57413880852383,82,39,162,165,4,colitis,COPD,3,moderate high
+17622,9,12,M,Ohio,specialist,213,74,64,16,"(117, 65)",97.7154856853694,179,32,103,176,3,colitis,COPD,4,high
+17623,2,39,M,Utah,primary care,212,68,67,17,"(124, 81)",98.63494793755689,136,85,99,130,7,tuberculosis,diabetes,1,mild
+17624,8,60,F,Texas,emergency,285,72,93,13,"(114, 70)",98.10709016726953,176,68,128,282,7,tuberculosis,depression,4,high
+17625,7,38,F,Alaska,nursing facility,215,64,78,18,"(127, 83)",98.29614359175262,100,61,178,263,1,hernia,COPD,2,moderate
+17626,5,27,M,Maine,hospital inpatient,113,61,60,16,"(112, 78)",99.06731760305846,113,32,75,294,5,colitis,osteoarthritis,3,moderate high
+17627,8,58,F,North Carolina,specialist,236,72,91,17,"(116, 80)",99.49120706311763,72,95,70,272,6,stroke,osteoarthritis,2,moderate
+17628,6,46,F,Texas,primary care,108,58,96,13,"(123, 81)",98.25214085874916,39,80,165,130,0,stroke,cancer,1,mild
+17629,3,72,F,Idaho,nursing facility,183,63,77,18,"(127, 65)",97.76150501869242,165,92,143,279,12,macular degeneration,depression,4,high
+17630,8,14,M,Texas,specialist,126,60,91,13,"(111, 72)",98.0975940193569,131,99,75,213,4,macular degeneration,osteoarthritis,2,moderate
+17632,3,25,F,Texas,primary care,183,59,68,18,"(132, 68)",99.41567711641117,182,39,96,213,8,macular degeneration,cancer,4,high
+17633,7,18,M,Maine,hospital inpatient,128,58,65,15,"(128, 81)",97.44554589736539,131,44,160,287,9,macular degeneration,diabetes,3,moderate high
+17634,4,77,F,Colorado,emergency,130,60,96,18,"(126, 71)",97.88480753039235,79,69,76,224,8,stroke,cancer,2,moderate
+17635,4,73,M,Maine,primary care,203,68,99,18,"(114, 66)",98.40498155580084,45,75,97,163,2,hernia,diabetes,0,low
+17636,5,15,M,Ohio,specialist,244,67,90,14,"(112, 84)",99.09057254076248,121,46,127,108,1,macular degeneration,diabetes,1,mild
+17637,10,34,M,Idaho,hospital inpatient,214,65,100,14,"(127, 82)",99.3650789044306,138,76,155,170,6,colitis,osteoarthritis,2,moderate
+17638,7,35,F,Colorado,hospital inpatient,245,74,99,15,"(117, 77)",97.8481760316899,101,68,105,289,3,colitis,COPD,3,moderate high
+17639,2,72,M,Alaska,emergency,209,75,79,15,"(131, 74)",98.40775421721439,156,95,110,258,9,macular degeneration,osteoarthritis,4,high
+17640,2,48,F,California,specialist,208,69,69,13,"(130, 73)",98.10444808760188,152,49,45,183,2,macular degeneration,COPD,2,moderate
+17641,3,28,F,California,hospital inpatient,158,72,89,18,"(115, 71)",98.04639205418661,128,85,143,134,8,hernia,diabetes,2,moderate
+17642,9,39,F,Idaho,primary care,217,72,95,17,"(119, 81)",99.12972873843714,104,24,182,202,12,macular degeneration,depression,4,high
+17644,7,40,F,Ohio,emergency,174,63,60,12,"(112, 85)",99.07041128699137,188,96,151,129,7,tuberculosis,depression,3,moderate high
+17645,6,98,F,Maine,primary care,162,75,85,15,"(124, 84)",98.95564910937715,135,74,80,252,5,macular degeneration,osteoarthritis,2,moderate
+17646,5,83,F,Colorado,emergency,120,58,74,18,"(127, 77)",97.51861333622666,65,52,127,155,7,colitis,COPD,2,moderate
+17647,1,79,F,Colorado,nursing facility,211,66,100,18,"(134, 67)",98.71277448139445,188,25,111,199,12,tuberculosis,depression,4,high
+17648,9,39,F,Texas,hospital inpatient,149,63,67,18,"(135, 70)",97.53805667502569,65,24,182,101,4,colitis,osteoarthritis,3,moderate high
+17650,4,74,M,New York,nursing facility,191,67,73,12,"(113, 84)",98.30486861834531,98,33,74,173,5,hernia,cancer,2,moderate
+17651,4,35,F,California,nursing facility,186,69,85,13,"(123, 71)",97.61338280951476,40,98,159,156,9,stroke,osteoarthritis,2,moderate
+17653,2,35,M,Texas,nursing facility,108,61,91,14,"(119, 65)",97.82349492299632,148,58,81,195,5,tuberculosis,osteoarthritis,1,mild
+17654,7,90,M,Texas,hospital inpatient,153,65,76,12,"(134, 80)",97.7427532614813,87,34,181,170,8,macular degeneration,COPD,3,moderate high
+17655,1,37,M,Alaska,nursing facility,271,73,99,16,"(118, 70)",98.13505786978342,67,34,164,295,4,hernia,depression,4,high
+17656,7,42,F,Maine,emergency,203,68,63,15,"(135, 84)",99.2691955864597,144,87,136,131,4,macular degeneration,diabetes,2,moderate
+17657,10,92,M,Idaho,specialist,231,76,60,13,"(123, 78)",97.6757072084674,69,75,176,193,2,colitis,osteoarthritis,1,mild
+17658,5,21,M,Colorado,emergency,233,74,85,15,"(123, 75)",97.42837839528897,113,22,172,119,3,hernia,cancer,3,moderate high
+17659,5,25,F,Ohio,nursing facility,154,60,61,15,"(119, 79)",99.26721098470858,157,93,109,272,3,tuberculosis,COPD,4,high
+17661,9,46,M,Ohio,hospital inpatient,180,76,76,15,"(113, 82)",98.6015601881512,35,56,139,221,10,macular degeneration,osteoarthritis,3,moderate high
+17662,5,62,F,California,emergency,145,59,63,13,"(135, 72)",98.31463285286341,40,43,153,229,8,tuberculosis,COPD,4,high
+17663,8,80,M,Alaska,nursing facility,191,67,91,15,"(135, 79)",98.5231921961201,80,49,133,247,6,stroke,depression,3,moderate high
+17664,5,83,M,North Carolina,hospital inpatient,198,65,62,14,"(125, 85)",98.86520187909883,83,25,50,281,11,hernia,depression,3,moderate high
+17665,9,23,F,Utah,specialist,177,60,64,14,"(117, 78)",99.45100640954712,49,57,63,264,11,macular degeneration,diabetes,2,moderate
+17666,7,93,M,Utah,specialist,107,58,76,16,"(115, 75)",98.03583250547373,138,31,167,152,2,tuberculosis,depression,2,moderate
+17667,9,86,F,Ohio,hospital inpatient,233,69,68,13,"(134, 68)",98.51856395596981,129,80,90,186,5,hernia,COPD,1,mild
+17668,9,15,M,Colorado,hospital inpatient,198,71,93,12,"(122, 82)",97.49676619816003,198,28,177,203,6,hernia,osteoarthritis,5,major
+17669,4,52,F,New York,emergency,207,67,64,18,"(121, 67)",97.9193508697406,124,73,163,155,6,macular degeneration,osteoarthritis,2,moderate
+17670,4,49,F,Idaho,primary care,233,65,70,18,"(132, 84)",98.34974688440215,170,86,72,152,10,macular degeneration,depression,2,moderate
+17671,4,16,F,North Carolina,emergency,315,76,67,15,"(126, 65)",98.80107246026566,40,61,152,147,1,tuberculosis,osteoarthritis,1,mild
+17672,6,42,M,Colorado,emergency,113,63,66,15,"(120, 73)",98.82243119780016,47,24,92,107,1,macular degeneration,diabetes,1,mild
+17673,8,50,F,Texas,primary care,222,72,93,13,"(125, 85)",98.89919460702515,124,95,46,161,12,macular degeneration,diabetes,1,mild
+17674,7,58,F,Colorado,nursing facility,218,69,100,17,"(117, 77)",98.79013613452247,48,93,164,293,1,macular degeneration,osteoarthritis,2,moderate
+17675,1,17,M,Idaho,emergency,152,73,92,15,"(120, 85)",98.07974239812759,196,82,104,138,8,colitis,diabetes,3,moderate high
+17676,1,72,M,California,primary care,200,67,76,12,"(112, 69)",99.16817036477674,79,99,179,297,8,macular degeneration,osteoarthritis,3,moderate high
+17677,9,46,F,New York,primary care,194,63,70,12,"(129, 65)",98.4617608212769,118,42,75,279,0,hernia,depression,2,moderate
+17679,9,33,F,Texas,hospital inpatient,276,71,84,14,"(132, 78)",98.99499595189002,55,42,67,294,6,stroke,diabetes,3,moderate high
+17680,3,83,M,Maine,emergency,142,67,79,16,"(115, 70)",99.55781692948702,120,87,66,164,9,colitis,diabetes,1,mild
+17681,1,48,F,Texas,nursing facility,267,70,68,12,"(113, 70)",98.845109399212,157,34,118,228,0,tuberculosis,osteoarthritis,4,high
+17682,4,48,M,Alaska,hospital inpatient,132,61,99,16,"(119, 74)",97.90183637131,64,67,126,247,2,tuberculosis,depression,2,moderate
+17683,10,75,F,California,primary care,158,64,69,15,"(117, 74)",97.52876636960306,64,36,173,281,5,macular degeneration,depression,4,high
+17684,9,27,F,Texas,primary care,284,76,78,15,"(129, 84)",98.91841971397997,105,69,62,185,10,colitis,diabetes,1,mild
+17685,2,49,M,North Carolina,emergency,153,66,89,12,"(132, 71)",99.32912740995317,59,80,47,273,1,macular degeneration,depression,1,mild
+17687,3,56,F,Utah,emergency,129,64,91,13,"(115, 74)",98.00270278304409,44,54,70,183,5,colitis,diabetes,1,mild
+17688,7,87,F,New York,hospital inpatient,141,69,95,15,"(129, 67)",98.7118245633077,183,86,52,280,7,tuberculosis,diabetes,3,moderate high
+17690,2,100,F,Idaho,specialist,141,60,87,17,"(116, 84)",99.05938660262578,38,25,58,259,11,colitis,depression,3,moderate high
+17691,6,82,M,Utah,specialist,250,68,80,17,"(128, 67)",98.31117042481178,125,85,181,285,6,stroke,depression,3,moderate high
+17692,3,46,F,North Carolina,specialist,172,68,61,17,"(119, 77)",98.52326569301874,83,45,168,264,8,colitis,diabetes,4,high
+17693,6,56,M,Idaho,primary care,106,60,68,14,"(113, 74)",98.1086908202156,42,100,84,174,4,tuberculosis,depression,1,mild
+17694,2,13,M,North Carolina,specialist,158,73,77,15,"(122, 85)",98.70101093879727,112,61,57,112,11,colitis,COPD,1,mild
+17695,5,43,M,Texas,nursing facility,180,61,84,12,"(123, 83)",97.64163060556879,166,100,71,156,12,stroke,cancer,2,moderate
+17696,8,48,F,Maine,hospital inpatient,280,73,70,14,"(121, 83)",99.57476391877795,187,54,116,299,2,stroke,COPD,3,moderate high
+17698,8,30,F,Maine,nursing facility,239,71,77,14,"(132, 81)",97.51187805561217,148,43,159,130,0,tuberculosis,osteoarthritis,2,moderate
+17699,5,78,M,Texas,specialist,164,75,74,14,"(124, 79)",98.09097189424165,69,100,187,297,8,stroke,COPD,3,moderate high
+17700,10,70,M,Texas,emergency,227,76,79,17,"(125, 69)",98.03976290256756,181,42,58,293,4,stroke,osteoarthritis,3,moderate high
