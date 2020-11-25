@@ -1,6 +1,15 @@
-mport csv
+import csv
 import numpy as np
 import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import (
+    FigureCanvasTkAgg, NavigationToolbar2Tk)
+# Implement the default Matplotlib key bindings.
+from matplotlib.backend_bases import key_press_handler
+from matplotlib.figure import Figure
+#https://matplotlib.org/3.1.0/gallery/user_interfaces/embedding_in_tk_sgskip.html
+
 
 
 empty_list=[]
@@ -26,6 +35,15 @@ def print_stats(dffs, string):
 
 def counts(string): #for GUI
     return '%s \n' % df.groupby(string)['id'].count().to_string()
+
+def graphsea(string):
+    fig, axs = plt.subplots(ncols=4, sharey=True)
+    sns.boxplot(x=women_under_65df[string], ax=axs[0], orient='v').set(xlabel='women_under_65', ylabel=string)
+    sns.boxplot(x=women_over_65df[string], ax=axs[1], orient='v').set(xlabel='women_over_65', ylabel='')
+    sns.boxplot(x=men_under_65df[string], ax=axs[2], orient='v').set(xlabel='men_under_65', ylabel='')
+    sns.boxplot(x=men_over_65df[string], ax=axs[3], orient='v').set(xlabel='men_over_65', ylabel='')
+    return fig
+
 import tkinter as tk
 root = tk.Tk()
 root.wm_title("Supersquad")
@@ -81,5 +99,28 @@ def print2(*args):
     T.insert(tk.END, print_stats(dfss[tkvar1.get()], tkvar2.get()) )   
 tkvar1.trace('w', holder)
 tkvar2.trace('w', print2)
+
+tkvar3 = tk.StringVar(root)
+choices3 = {'Triglycerides','HDL','LDL','Total Cholesterol','CRP'}
+tkvar3.set('HDL')
+
+c=tk.Label(root, text="Choose a lab test to graph:")
+c.pack()
+popupMenu3 = tk.OptionMenu(root, tkvar3, *choices3)
+tk.Label(root, text="Choose a Lab Test to Graph")
+popupMenu3.pack()
+
+
+def graph(*args):
+    fig=graphsea(tkvar3.get())
+    dlg = tk.Toplevel(root)
+    y=tk.Label(dlg, text="Feature")
+    y.pack()
+    canvas = FigureCanvasTkAgg(fig, master=dlg)  # A tk.DrawingArea.
+    canvas.draw()
+    canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
+
+
+tkvar3.trace('w', graph)
 
 tk.mainloop()
