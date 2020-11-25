@@ -1,8 +1,7 @@
-import csv
+mport csv
 import numpy as np
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
+
 
 empty_list=[]
 women_under_65=[]
@@ -27,10 +26,9 @@ def print_stats(dffs, string):
 
 def counts(string): #for GUI
     return '%s \n' % df.groupby(string)['id'].count().to_string()
-
 import tkinter as tk
 root = tk.Tk()
-
+root.wm_title("Supersquad")
 w=tk.Label(root, text="Counts and Statistics")
 w.pack()
 
@@ -38,11 +36,16 @@ tkvar = tk.StringVar(root)
 choices = {'Disease at Admission','state','visittype','Comorbidities'}
 tkvar.set('state')
 
+a=tk.Label(root, text="Choose a attribute to count:")
+a.pack()
+
 popupMenu = tk.OptionMenu(root, tkvar, *choices)
 #y=tk.Label(popupMenu, text="Features")
 #y.pack()
 popupMenu.pack()
 
+b=tk.Label(root, text="Choose a grouping and a lab test for Discriptive Statistics:")
+b.pack()
 
 def print1(*args):
     T.delete(1.0, tk.END)
@@ -79,3 +82,4 @@ def print2(*args):
 tkvar1.trace('w', holder)
 tkvar2.trace('w', print2)
 
+tk.mainloop()
