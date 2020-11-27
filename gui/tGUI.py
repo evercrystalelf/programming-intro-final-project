@@ -13,7 +13,6 @@ with open("patients.csv", "r") as f:
         patients.append(row)  ##  All the above lines are from Jin's GUI code
 
 window = tk.Tk() ## create window
-window.geometry("100x200") ## window size
 window.title = ('Supersquad') ## title of window
 
 lbl = Label(window, text = "Please select a Risk to view patients") ## adding a label to display above drop down
@@ -26,16 +25,16 @@ variable = tk.StringVar()
 variable.set(options[0]) ## displays when first runs, before user selection
     
 opt = tk.OptionMenu(window, variable, *options)
-opt.configure(font=("Arial",20)) ## making the drop down very visable
-opt.grid(row=1,colum=0) ## positiong under window label
 opt.pack() ## .pack() makes things show up in the gui
+
+tk.Text(root, height=10, width=50). ## John's code
+T = tk.Text(root, height=10, width=50). ## John's code
+T.pack(). ## John's code
 
 def retrieve():   ## defining the command thisbutton uses
     for p in patients:
         if p[20] == variable.get():
-            print(p)
-
-
+                        
 ## making a button named Retrieve Patients
 thisbutton = Button(window, text="Retrieve Patients", command = retrieve)
 thisbutton.pack()
