@@ -25,6 +25,7 @@ variable = tk.StringVar()
 variable.set(options[0]) ## displays when first runs, before user selection
     
 opt = tk.OptionMenu(window, variable, *options)
+opt.configure(font=("Arial",20)) ## making the drop down very visable
 opt.pack() ## .pack() makes things show up in the gui
 
 tk.Text(root, height=10, width=50). ## John's code
