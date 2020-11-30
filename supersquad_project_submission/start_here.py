@@ -718,7 +718,7 @@ popupMenu3.pack()
 
 
 def graph(*args):
-    fig=statistics.graphsea(tkvar3.get())
+    fig= graphsea(tkvar3.get())
     dlg = tk.Toplevel(root)
     y=tk.Label(dlg, text="Feature")
     y.pack()
