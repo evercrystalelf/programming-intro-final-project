@@ -15,7 +15,7 @@ from matplotlib.figure import Figure
 import random
 
 #importing the modules
-from patient_cardiovascular import patient_cardiovascular
+# from patient_cardiovascular import patient_cardiovascular
 from statistics import statistics
 
 '''JIN'S CODE'''
@@ -160,7 +160,6 @@ with open('patients.csv', 'w', newline='') as file:
     # write every patient to the csv file
     for p in patients:
         w.writerow([p.id, p.provider, p.age, p.sex, p.state, p.visittype, p.weight, p.height, p.bmi(), p.heart_rate, p.respiration, p.blood_pressure[0], p.blood_pressure[1], "{:.2f}".format(p.temperature)])
-file.close()
 
 '''RUNNING THE PATIENT CARDIOVASCULAR DATA STUDY MODULE'''
 def patient_cardiovascular():
@@ -171,6 +170,10 @@ def patient_cardiovascular():
             i += 1
 
     _idGen = _makeIDGen()
+
+    _disease_at_admission = ['stroke', 'hernia', 'macular degeneration', 'tuberculosis', 'colitis']
+
+    _comorbidities = ['COPD', 'cancer', 'diabetes', 'osteoarthritis', 'depression']
 
     class Adult:
         def __init__(self):
@@ -285,9 +288,7 @@ def patient_cardiovascular():
         w.writerow(['id', 'provider', 'age', 'sex', 'state', 'visittype', 'weight', 'height', 'heartrate', 'respiration', 'blood pressure', 'temperature', 'Triglycerides', 'HDL', 'LDL', 'Total Cholesterol', 'CRP', 'Disease at Admission', 'Comobiditiy', 'Risk Score', 'Risk'])
         for c in range(len(cardio_case)):
             w.writerow([cardio_case[c][0], cardio_case[c][1], cardio_case[c][2], cardio_case[c][3], cardio_case[c][4], cardio_case[c][5], cardio_case[c][6], cardio_case[c][7], cardio_case[c][8], cardio_case[c][9], cardio_case[c][10], cardio_case[c][11], cardio_case[c][12], cardio_case[c][13], cardio_case[c][14], cardio_case[c][15], cardio_case[c][16], cardio_case[c][17], cardio_case[c][18], cardio_case[c][19], cardio_case[c][20]])
- 
 
-'''GUI SCRIPT'''
 '''JIN'S GUI CODE'''
 
 patients = []
@@ -527,7 +528,6 @@ def print_patient():
             pheigh = tk.Label(dlg, text="Height (in)")
             pheigh.pack()
 
-<<<<<<< HEAD
             # show patient's weight 
             pweigh = tk.Label(dlg, text="Weight (lb)")
             pweigh.pack()
@@ -550,7 +550,7 @@ def print_patient():
             ptemp.pack()
 
             # create pdf
-            psave = tk.Button(dlg, text="Save", command=save)
+            psave = tk.Button(dlg, text="Save", command=sa-+ve)
             psave.pack()
 
             # create cancel button
@@ -571,15 +571,8 @@ e = tk.Label(root, text="""
 
 VIEW CARDIOVASCULAR DATA STUDY
 (Select Study)""")
-=======
-'''END JIN'S CODE'''
 
 '''THERESA'S GUI SCRIPT'''
-<<<<<<< HEAD:Supersquad Project Submission/start_here.py
-=======
-'''
->>>>>>> 1b4e2747c96b67efc63c4468182acfc12d5d354a
->>>>>>> bdfcf7dfbb1a25e2c0393f3c1a621737d0c43b3d:supersquad_project_submission/start_here.py
 
 df = pd.read_csv("cardiocases.csv") ## using pandas to make the csv a dataframe
 
@@ -629,11 +622,8 @@ tree.pack()
 
 # root.mainloop()
 
-<<<<<<< HEAD:Supersquad Project Submission/start_here.py
-=======
 # run the gui window
-#root.mainloop()
->>>>>>> bdfcf7dfbb1a25e2c0393f3c1a621737d0c43b3d:supersquad_project_submission/start_here.py
+#root.mainloop()\
 
 '''JOHN'S DESCRIPTIVE STATISTICS MODULE AND GUI SCRIPT'''
 

@@ -1,0 +1,301 @@
+id,Triglycerides,HDL,LDL,Total Cholesterol,CRP,Disease at Admission,Comobiditiy
+1,57,91,174,201,1,macular degeneration,cancer
+2,90,68,154,269,9,tuberculosis,depression
+3,122,69,102,298,8,hernia,depression
+4,117,23,105,230,2,hernia,diabetes
+5,114,32,89,106,9,colitis,diabetes
+6,74,69,153,173,12,colitis,diabetes
+7,117,34,73,139,8,tuberculosis,osteoarthritis
+8,124,62,79,122,12,macular degeneration,cancer
+9,139,44,171,220,12,hernia,diabetes
+10,84,90,161,149,10,colitis,COPD
+11,126,64,141,251,12,colitis,diabetes
+12,64,60,189,181,1,stroke,COPD
+13,180,82,141,171,7,tuberculosis,osteoarthritis
+14,93,92,133,188,12,hernia,osteoarthritis
+15,35,23,151,170,3,tuberculosis,depression
+16,59,40,45,290,2,macular degeneration,osteoarthritis
+17,111,83,65,278,10,stroke,COPD
+18,41,65,189,171,4,hernia,depression
+19,90,75,85,167,8,macular degeneration,depression
+20,79,91,100,162,7,colitis,COPD
+21,56,44,155,189,4,tuberculosis,diabetes
+22,162,26,140,231,1,colitis,diabetes
+23,168,92,118,242,10,macular degeneration,osteoarthritis
+24,191,73,167,208,2,hernia,cancer
+25,106,26,42,178,6,stroke,osteoarthritis
+26,81,61,111,184,1,colitis,COPD
+27,49,67,133,186,3,hernia,depression
+28,163,70,127,279,3,tuberculosis,COPD
+29,128,37,161,137,1,macular degeneration,depression
+30,40,45,90,222,12,colitis,cancer
+31,72,37,42,266,5,colitis,cancer
+32,144,51,107,226,12,hernia,diabetes
+33,91,91,125,235,0,colitis,COPD
+34,116,89,129,254,12,tuberculosis,depression
+35,140,98,111,201,2,tuberculosis,diabetes
+36,57,32,46,153,10,macular degeneration,osteoarthritis
+37,184,39,125,176,0,hernia,diabetes
+38,176,34,87,206,2,hernia,cancer
+39,36,48,44,296,1,stroke,depression
+40,198,68,146,158,7,colitis,cancer
+41,91,20,105,258,12,hernia,cancer
+42,78,52,161,166,9,hernia,depression
+43,88,63,120,179,11,hernia,depression
+44,74,47,125,121,2,colitis,diabetes
+45,90,58,96,105,7,colitis,COPD
+46,130,72,147,125,8,hernia,osteoarthritis
+47,103,73,85,175,10,colitis,depression
+48,102,54,181,104,6,tuberculosis,diabetes
+49,48,37,58,287,0,hernia,COPD
+50,115,34,66,300,5,stroke,diabetes
+51,85,72,160,141,5,stroke,cancer
+52,193,96,145,234,1,macular degeneration,diabetes
+53,161,82,185,140,0,colitis,diabetes
+54,115,39,113,169,9,macular degeneration,depression
+55,157,50,50,190,10,hernia,diabetes
+56,59,66,133,285,11,stroke,COPD
+57,140,74,170,211,11,hernia,diabetes
+58,171,75,97,276,0,stroke,cancer
+59,151,67,132,215,0,colitis,COPD
+60,198,98,134,201,1,tuberculosis,osteoarthritis
+61,176,55,127,151,6,hernia,osteoarthritis
+62,131,54,152,292,6,tuberculosis,depression
+63,121,43,54,252,7,colitis,depression
+64,123,32,181,249,0,hernia,depression
+65,38,38,133,299,11,tuberculosis,diabetes
+66,106,28,77,100,6,colitis,COPD
+67,125,56,119,255,2,tuberculosis,cancer
+68,123,43,99,154,10,hernia,osteoarthritis
+69,123,47,131,289,0,macular degeneration,diabetes
+70,99,78,93,215,10,tuberculosis,osteoarthritis
+71,80,32,174,111,12,tuberculosis,diabetes
+72,191,96,108,156,3,hernia,COPD
+73,83,58,48,210,7,hernia,osteoarthritis
+74,189,75,51,142,5,hernia,osteoarthritis
+75,45,67,48,279,7,tuberculosis,osteoarthritis
+76,155,56,177,275,2,hernia,COPD
+77,133,28,69,291,6,colitis,osteoarthritis
+78,122,66,101,273,5,macular degeneration,cancer
+79,70,28,42,195,6,tuberculosis,osteoarthritis
+80,106,73,91,148,12,tuberculosis,depression
+81,40,45,71,300,11,macular degeneration,depression
+82,136,34,79,268,5,stroke,COPD
+83,145,96,104,298,7,hernia,cancer
+84,72,68,138,250,10,tuberculosis,depression
+85,139,70,84,289,10,tuberculosis,COPD
+86,138,95,70,116,4,hernia,depression
+87,147,47,122,214,5,hernia,cancer
+88,40,78,145,287,12,tuberculosis,cancer
+89,182,73,93,130,10,colitis,COPD
+90,49,90,111,265,9,tuberculosis,depression
+91,94,47,136,157,0,hernia,osteoarthritis
+92,82,99,81,138,1,colitis,depression
+93,151,52,137,216,6,colitis,COPD
+94,166,24,188,134,2,tuberculosis,COPD
+95,39,42,107,109,8,tuberculosis,COPD
+96,51,28,139,102,8,colitis,depression
+97,83,34,62,157,6,colitis,COPD
+98,145,52,148,230,1,tuberculosis,depression
+99,110,98,160,298,11,hernia,COPD
+100,57,21,66,239,5,hernia,COPD
+101,59,29,150,177,12,stroke,depression
+102,160,55,133,259,0,colitis,cancer
+103,171,53,60,246,6,macular degeneration,depression
+104,185,44,160,211,12,macular degeneration,depression
+105,121,38,113,102,4,colitis,depression
+106,68,77,162,290,6,tuberculosis,COPD
+107,127,70,65,195,8,macular degeneration,COPD
+108,120,82,121,158,3,macular degeneration,COPD
+109,87,57,104,288,3,tuberculosis,osteoarthritis
+110,124,69,166,141,5,colitis,COPD
+111,101,100,169,174,4,hernia,COPD
+112,109,83,163,176,5,macular degeneration,depression
+113,136,93,70,293,1,macular degeneration,osteoarthritis
+114,129,58,96,118,6,colitis,COPD
+115,77,28,117,242,9,tuberculosis,diabetes
+116,124,34,151,183,6,hernia,diabetes
+117,169,57,150,261,6,stroke,cancer
+118,113,94,171,236,12,hernia,depression
+119,73,67,158,113,3,stroke,COPD
+120,161,56,163,184,11,macular degeneration,cancer
+121,193,54,63,170,8,stroke,cancer
+122,58,33,41,173,1,hernia,depression
+123,181,55,44,268,4,tuberculosis,osteoarthritis
+124,56,70,49,241,4,tuberculosis,COPD
+125,52,59,173,265,6,colitis,COPD
+126,148,87,189,135,6,macular degeneration,COPD
+127,188,98,71,173,12,macular degeneration,osteoarthritis
+128,46,73,77,114,3,hernia,cancer
+129,134,90,130,288,11,hernia,COPD
+130,171,28,62,156,9,tuberculosis,depression
+131,194,20,112,158,12,stroke,osteoarthritis
+132,169,74,133,225,3,stroke,osteoarthritis
+133,55,57,146,264,9,hernia,diabetes
+134,158,71,150,292,12,hernia,osteoarthritis
+135,79,70,159,245,2,macular degeneration,cancer
+136,158,82,185,138,12,tuberculosis,depression
+137,172,62,62,292,2,macular degeneration,diabetes
+138,187,20,159,282,5,colitis,cancer
+139,46,78,93,133,10,stroke,diabetes
+140,126,76,55,293,4,colitis,cancer
+141,193,86,180,232,1,hernia,osteoarthritis
+142,172,38,103,273,10,macular degeneration,osteoarthritis
+143,57,43,190,282,6,colitis,COPD
+144,113,37,80,254,8,tuberculosis,diabetes
+145,174,93,157,138,3,colitis,osteoarthritis
+146,176,44,181,230,11,hernia,COPD
+147,69,80,53,250,12,hernia,cancer
+148,197,68,96,271,7,stroke,COPD
+149,92,87,183,275,4,macular degeneration,cancer
+150,49,90,146,173,11,stroke,osteoarthritis
+151,137,27,131,111,3,colitis,depression
+152,108,44,170,117,2,hernia,COPD
+153,44,92,76,237,7,hernia,COPD
+154,195,45,164,258,1,hernia,depression
+155,186,24,69,292,4,stroke,cancer
+156,125,89,92,196,10,stroke,diabetes
+157,87,72,180,146,8,stroke,osteoarthritis
+158,161,97,162,242,11,macular degeneration,osteoarthritis
+159,56,54,125,129,2,tuberculosis,diabetes
+160,195,81,60,184,11,colitis,osteoarthritis
+161,194,94,64,114,8,stroke,depression
+162,194,86,59,142,0,colitis,depression
+163,134,65,156,157,7,hernia,diabetes
+164,181,31,179,112,0,colitis,osteoarthritis
+165,123,79,47,110,12,tuberculosis,depression
+166,189,100,94,170,0,stroke,osteoarthritis
+167,35,20,109,191,11,stroke,depression
+168,82,41,118,231,8,macular degeneration,osteoarthritis
+169,68,34,117,177,4,hernia,diabetes
+170,192,95,45,106,0,tuberculosis,diabetes
+171,93,66,44,105,12,macular degeneration,depression
+172,146,41,102,224,1,macular degeneration,COPD
+173,135,93,80,266,4,macular degeneration,osteoarthritis
+174,180,91,184,203,12,colitis,diabetes
+175,190,57,174,280,2,macular degeneration,cancer
+176,167,73,100,189,12,macular degeneration,cancer
+177,43,43,130,253,10,stroke,COPD
+178,183,75,160,122,10,colitis,osteoarthritis
+179,66,24,41,191,7,tuberculosis,depression
+180,69,95,93,269,2,stroke,cancer
+181,98,44,64,189,1,stroke,cancer
+182,35,26,91,286,2,stroke,diabetes
+183,200,54,183,235,4,colitis,COPD
+184,61,77,179,150,9,colitis,osteoarthritis
+185,77,33,56,260,2,tuberculosis,COPD
+186,198,37,146,111,0,colitis,COPD
+187,95,52,159,190,5,stroke,cancer
+188,131,20,123,144,3,macular degeneration,diabetes
+189,98,41,69,284,3,hernia,cancer
+190,72,73,107,292,5,colitis,COPD
+191,74,83,58,214,9,colitis,osteoarthritis
+192,119,47,78,131,6,tuberculosis,depression
+193,76,80,50,150,5,colitis,diabetes
+194,45,28,114,233,6,macular degeneration,cancer
+195,109,67,104,151,10,stroke,depression
+196,38,53,47,279,1,colitis,cancer
+197,186,76,113,166,7,stroke,diabetes
+198,200,57,142,138,1,tuberculosis,COPD
+199,66,59,180,274,3,colitis,COPD
+200,98,28,128,181,2,stroke,COPD
+201,46,82,56,288,12,hernia,cancer
+202,193,72,90,223,8,stroke,diabetes
+203,60,72,132,130,11,macular degeneration,cancer
+204,110,33,103,109,11,macular degeneration,cancer
+205,156,23,82,153,10,hernia,cancer
+206,157,98,65,204,2,hernia,diabetes
+207,122,32,89,144,4,macular degeneration,depression
+208,200,61,46,230,10,tuberculosis,COPD
+209,106,43,79,136,4,hernia,depression
+210,134,34,183,180,11,tuberculosis,COPD
+211,48,32,149,155,11,colitis,diabetes
+212,195,23,146,218,6,macular degeneration,depression
+213,178,28,77,255,2,stroke,cancer
+214,89,50,62,122,11,macular degeneration,osteoarthritis
+215,73,39,164,139,1,hernia,diabetes
+216,90,24,180,143,0,colitis,diabetes
+217,174,74,77,149,8,stroke,cancer
+218,40,55,78,223,2,tuberculosis,COPD
+219,41,70,76,211,4,stroke,cancer
+220,132,51,76,247,3,stroke,cancer
+221,90,27,156,228,8,hernia,COPD
+222,198,25,74,150,3,colitis,COPD
+223,126,31,136,295,8,colitis,diabetes
+224,183,61,106,123,5,hernia,cancer
+225,94,26,96,161,7,colitis,osteoarthritis
+226,184,27,106,208,6,hernia,depression
+227,56,59,145,207,10,colitis,cancer
+228,62,76,150,240,2,stroke,cancer
+229,180,44,188,211,5,tuberculosis,depression
+230,65,86,45,153,1,hernia,cancer
+231,35,33,96,238,0,tuberculosis,diabetes
+232,77,83,146,230,7,colitis,depression
+233,144,97,48,210,6,tuberculosis,cancer
+234,38,57,87,123,7,macular degeneration,diabetes
+235,137,91,175,264,12,colitis,cancer
+236,80,77,154,263,7,tuberculosis,COPD
+237,36,56,107,114,8,tuberculosis,diabetes
+238,176,30,166,279,11,colitis,osteoarthritis
+239,120,71,150,293,0,tuberculosis,COPD
+240,74,83,175,127,8,hernia,cancer
+241,184,30,71,125,11,colitis,COPD
+242,199,31,151,206,12,stroke,osteoarthritis
+243,131,89,124,298,10,colitis,depression
+244,68,46,139,195,10,hernia,osteoarthritis
+245,187,60,80,255,9,hernia,diabetes
+246,195,97,49,122,12,stroke,cancer
+247,166,27,69,169,12,stroke,diabetes
+248,55,24,46,110,3,stroke,COPD
+249,115,89,67,236,1,stroke,depression
+250,113,70,166,226,5,hernia,osteoarthritis
+251,37,91,95,257,7,stroke,cancer
+252,53,56,70,178,11,macular degeneration,COPD
+253,152,86,50,262,9,stroke,cancer
+254,83,72,152,252,7,hernia,diabetes
+255,80,62,157,166,7,colitis,depression
+256,128,54,82,264,1,macular degeneration,COPD
+257,149,80,184,109,10,macular degeneration,diabetes
+258,156,78,131,133,12,colitis,COPD
+259,67,85,126,156,5,stroke,osteoarthritis
+260,169,67,178,260,11,stroke,COPD
+261,65,79,40,200,12,macular degeneration,COPD
+262,144,47,112,179,4,stroke,cancer
+263,125,24,128,251,2,stroke,diabetes
+264,107,92,178,146,8,hernia,diabetes
+265,98,82,128,275,10,macular degeneration,COPD
+266,170,48,69,237,9,colitis,COPD
+267,158,86,186,183,2,hernia,depression
+268,151,49,47,190,6,hernia,diabetes
+269,125,94,112,288,11,hernia,cancer
+270,122,29,103,128,7,hernia,cancer
+271,74,66,159,194,8,stroke,cancer
+272,98,61,146,116,5,hernia,diabetes
+273,183,26,125,190,7,tuberculosis,diabetes
+274,122,62,111,119,1,colitis,diabetes
+275,197,40,188,227,11,stroke,depression
+276,47,38,105,147,0,tuberculosis,diabetes
+277,66,72,43,249,0,tuberculosis,osteoarthritis
+278,82,79,158,176,12,macular degeneration,cancer
+279,35,25,60,132,6,tuberculosis,COPD
+280,76,54,171,223,11,tuberculosis,diabetes
+281,144,86,63,137,12,hernia,COPD
+282,88,38,92,198,2,colitis,COPD
+283,162,51,105,199,8,stroke,cancer
+284,60,96,44,136,4,stroke,diabetes
+285,180,61,143,299,6,colitis,depression
+286,128,38,122,236,6,hernia,depression
+287,183,30,45,169,0,hernia,diabetes
+288,170,82,61,269,1,stroke,diabetes
+289,155,96,94,199,11,colitis,osteoarthritis
+290,48,31,87,247,5,colitis,COPD
+291,129,78,113,119,10,colitis,osteoarthritis
+292,97,48,189,107,6,macular degeneration,COPD
+293,183,67,162,280,6,hernia,depression
+294,112,76,43,250,11,tuberculosis,depression
+295,165,87,76,135,3,macular degeneration,osteoarthritis
+296,48,65,63,175,7,macular degeneration,cancer
+297,113,75,135,205,0,stroke,osteoarthritis
+298,142,50,136,216,7,colitis,cancer
+299,189,38,51,297,0,stroke,osteoarthritis
+300,159,96,149,164,8,tuberculosis,cancer
