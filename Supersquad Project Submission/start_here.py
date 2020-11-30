@@ -3,6 +3,7 @@ import tkinter as tk
 from tkinter import *
 from tkinter import ttk
 import csv
+import pandas as pd
 
 #importing the modules
 from patient import patient
@@ -30,7 +31,6 @@ with open('patients.csv', 'w', newline='') as file:
     # write every patient to the csv file
     for p in patients:
         w.writerow([p.id, p.provider, p.age, p.sex, p.state, p.visittype, p.weight, p.height, p.bmi(), p.heart_rate, p.respiration, p.blood_pressure[0], p.blood_pressure[1], "{:.2f}".format(p.temperature)])
-file.close()
 
 '''RUNNING THE PATIENT CARDIOVASCULAR DATA MODULE'''
 
