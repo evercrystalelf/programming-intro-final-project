@@ -10,6 +10,11 @@ def _makeIDGen(): # setting up Jin's id generator to make a merge point for
 
 _idGen = _makeIDGen()
 
+_disease_at_admission = ['stroke', 'hernia', 'macular degeneration', 'tuberculosis', 'colitis']
+
+_comorbidities = ['COPD', 'cancer', 'diabetes', 'osteoarthritis', 'depression']
+
+
 class Adult:               # creating adult class
     def __init__(self):    # costructor of class attributes
         self.id =  next(_idGen)

@@ -12,7 +12,7 @@ from matplotlib.backends.backend_tkagg import (
     FigureCanvasTkAgg, NavigationToolbar2Tk)
 from matplotlib.backend_bases import key_press_handler
 from matplotlib.figure import Figure
-import pandas as pd
+import random
 
 #importing the modules
 from patient_cardiovascular import patient_cardiovascular
@@ -162,6 +162,132 @@ with open('patients.csv', 'w', newline='') as file:
         w.writerow([p.id, p.provider, p.age, p.sex, p.state, p.visittype, p.weight, p.height, p.bmi(), p.heart_rate, p.respiration, p.blood_pressure[0], p.blood_pressure[1], "{:.2f}".format(p.temperature)])
 file.close()
 
+'''RUNNING THE PATIENT CARDIOVASCULAR DATA STUDY MODULE'''
+def patient_cardiovascular():
+    def _makeIDGen():
+        i = 1
+        while True:
+            yield i
+            i += 1
+
+    _idGen = _makeIDGen()
+
+    class Adult:
+        def __init__(self):
+            self.id =  next(_idGen)
+            self.triglycerides = random.randint(35,200)
+            self.HDL = random.randint(20,100)
+            self.LDL = random.randint(40,190)
+            self.total_cholesterol = random.randint(100,300)
+            self.CRP = random.randint(0,12)
+            self.disease = random.choice(_disease_at_admission)
+            self.comorbidities = random.choice(_comorbidities)
+
+        def __str__(self):
+            return f'ID: {self.id}, Triglycerides: {self.triglycerides}, HDL: {self.HDL}, LDL: {self.LDL}, Total Cholesterol: {self.total_cholesterol}, CRP: {self.CRP}, Disease at Admission: {self.disease}, Comorbidity: {self.comorbidities}'
+        
+        def __repr__(self):
+            return str(self)
+        
+    adults = []
+
+    for i in range(0, 300):
+        a = Adult()
+        adults.append(a)    
+        
+    with open('total.csv', 'w', newline='') as file:
+        # writer for writing the csv rows in the file
+        w = csv.writer(file)
+        # use writerow to write the header in csv file
+        w.writerow(['id', 'Triglycerides', 'HDL', 'LDL', 'Total Cholesterol', 'CRP', 'Disease at Admission', 'Comobiditiy'])
+        # write every patinet to the csv file
+        for a in adults:
+            w.writerow([a.id, a.triglycerides, a.HDL, a.LDL, a.total_cholesterol, a.CRP, a.disease, a.comorbidities])  
+            
+    import pandas as pd
+
+    p = pd.read_csv("patients.csv")
+
+    t = pd.read_csv("total.csv")
+
+    merged = p.merge(t, on='id')
+
+    merged.to_csv("combo.csv", index = False)        
+
+    middleman = [] 
+
+    with open("combo.csv", 'r') as csvfile: 
+        
+        csvreader = csv.reader(csvfile) # making a reader object
+        
+        for row in csvreader:  # adding each line as an element in middleman
+            middleman.append(row)  
+
+    middleman.pop(0) #removing the header row
+
+    cardio_case=[] #opening an empty list to put the adult patients in
+
+
+    for i in range(300): # all lists in list
+        if int(middleman[i][2]) >= 12: # if index 2 of each list is adult
+            cardio_case.append(middleman[i]) # add the list to cardio_case
+
+
+
+    for f in range(len(cardio_case)): 
+        
+        points = 0
+                                
+        if int(cardio_case[f][12]) > 150: # if the value meets the condition
+                points+=1          # a point is added
+        
+        if cardio_case[f][3] == 'M' and int(cardio_case[f][13]) < 40:
+                points+=1
+                
+        if cardio_case[f][3] == 'F' and int(cardio_case[f][13]) <50:
+                points+=1
+    
+        if int(cardio_case[f][14]) > 100:
+                points+=1
+        
+        if int(cardio_case[f][15]) > 200:
+                points+=1
+        
+        if int(cardio_case[f][16]) > 2:
+                points+=1
+        
+        
+        cardio_case[f].append(str(points)) # adding the point total to the adult patients
+
+
+        
+    for n in range(len(cardio_case)):
+        
+        if int(cardio_case[n][19]) == 0:
+                Risk = 'low'
+        if int(cardio_case[n][19]) == 1:
+                Risk = 'mild'
+        if int(cardio_case[n][19]) == 2:
+                Risk = 'moderate'
+        if int(cardio_case[n][19]) == 3:
+                Risk = 'moderate high'
+        if int(cardio_case[n][19]) == 4:
+                Risk = 'high'
+        if int(cardio_case[n][19]) == 5:
+                Risk = 'major'
+                
+        cardio_case[n].append(Risk)
+
+    with open('cardiocases.csv', 'w', newline='') as file:
+        # writer for writing the csv rows in the file
+        w = csv.writer(file)
+        # use writerow to write the header in csv file    
+        w.writerow(['id', 'provider', 'age', 'sex', 'state', 'visittype', 'weight', 'height', 'heartrate', 'respiration', 'blood pressure', 'temperature', 'Triglycerides', 'HDL', 'LDL', 'Total Cholesterol', 'CRP', 'Disease at Admission', 'Comobiditiy', 'Risk Score', 'Risk'])
+        for c in range(len(cardio_case)):
+            w.writerow([cardio_case[c][0], cardio_case[c][1], cardio_case[c][2], cardio_case[c][3], cardio_case[c][4], cardio_case[c][5], cardio_case[c][6], cardio_case[c][7], cardio_case[c][8], cardio_case[c][9], cardio_case[c][10], cardio_case[c][11], cardio_case[c][12], cardio_case[c][13], cardio_case[c][14], cardio_case[c][15], cardio_case[c][16], cardio_case[c][17], cardio_case[c][18], cardio_case[c][19], cardio_case[c][20]])
+ 
+
+'''GUI SCRIPT'''
 '''JIN'S GUI CODE'''
 
 patients = []
@@ -175,15 +301,16 @@ with open("patients.csv", "r") as f:
 
 root = tk.Tk()
 # adjust the window's size
-root.geometry("400x240")
+root.geometry("400x800")
 #change the window's title
 root.wm_title("Supersquad")
 # create patinet ID label, w is the label
-w = tk.Label(root, text="Patient ID")
+w = tk.Label(root, text="""EDIT PATIENT DATA
+(Enter Patient ID)""")
 # use pack to determine the size of the label
 w.pack()
 # create the text box
-patientid = tk.Text(root, height=1, width=10)
+patientid = tk.Text(root, height=1, width=20)
 # use pack to determine the size of the text (another widget)
 patientid.pack()
 # create a function which can print what the user types for patientid
@@ -196,7 +323,7 @@ def find_patient():
             # create another new window
             dlg = tk.Toplevel(root)
             # the name of the new window
-            dlg.wm_title("Patinet %s Information" % p[0])
+            dlg.wm_title("Patient %s Information" % p[0])
             # show the patient's providerID
             proid = tk.Label(dlg, text="Provider ID")
             proid.pack()
@@ -353,13 +480,106 @@ find_btn = tk.Button(root, text="Find", command=find_patient)
 # use pack to show find button
 find_btn.pack()
 
+e = tk.Label(root, text="""
 
-# run the gui window
-#root.mainloop()
+PRINT PATIENT DATA SHEET
+(Enter Patient ID)""")
+# use pack to determine the size of the label
+e.pack()
+# create the text box
+patientid2 = tk.Text(root, height=1, width=20)
+# use pack to determine the size of the text (another widget)
+patientid2.pack()
 
+def print_patient():
+    for p in patients:
+        if p[0] == patientid2.get(1.0, tk.END+"-1c"):
+            def dismiss ():
+                dlg.grab_release()
+                dlg.destroy()
+            # create another new window
+            dlg = tk.Toplevel(root)
+            
+            # the name of the new window
+            dlg.wm_title("Patient %s Information" % p[0])
+            
+            # show the patient's providerID
+            proid = tk.Label(dlg, text="Provider ID")
+            proid.pack()
+
+            # show patient's age
+            page = tk.Label(dlg, text="Age")
+            page.pack()
+
+            # show patient's sex
+            sex = tk.Label(dlg, text="Sex")
+            sex.pack()
+            
+            # show patient's state
+            pstate = tk.Label(dlg, text="State")
+            pstate.pack()
+
+            # show patient's vt
+            pvt = tk.Label(dlg, text="Visit Type")
+            pvt.pack()
+
+            # show patient's height
+            pheigh = tk.Label(dlg, text="Height (in)")
+            pheigh.pack()
+
+<<<<<<< HEAD
+            # show patient's weight 
+            pweigh = tk.Label(dlg, text="Weight (lb)")
+            pweigh.pack()
+
+            # show patient's bmi
+            pbmi = tk.Label(dlg, text="BMI")
+            pbmi.pack()
+
+            # show patient's vital signs
+            pvitalsigns = tk.Label(dlg, text="Vital Signs")
+            pvitalsigns.pack()
+
+            prespi = tk.Label(dlg, text="Respiration")
+            prespi.pack()
+
+            pbloodp = tk.Label(dlg, text="Systolic Blood Pressure")
+            pbloodp.pack()
+
+            ptemp = tk.Label(dlg, text="Temperature")
+            ptemp.pack()
+
+            # create pdf
+            psave = tk.Button(dlg, text="Save", command=save)
+            psave.pack()
+
+            # create cancel button
+            pcancel = tk.Button(dlg, text="Cancel", command=dismiss)
+            pcancel.pack()
+
+            dlg.protocol("WM_DELETE_WINDOW", dismiss) # intercept close button
+            dlg.transient(root)   # dialog window is related to main
+            dlg.wait_visibility() # can't grab until window appears, so we wait
+            dlg.grab_set()        # ensure all input goes to our window
+            dlg.wait_window()     # block until window is destroyed
+
+print_btn = tk.Button(root, text="Print", command=print_patient)
+# use pack to show print button
+print_btn.pack()
+
+e = tk.Label(root, text="""
+
+VIEW CARDIOVASCULAR DATA STUDY
+(Select Study)""")
+=======
 '''END JIN'S CODE'''
 
 '''THERESA'S GUI SCRIPT'''
+<<<<<<< HEAD:Supersquad Project Submission/start_here.py
+=======
+'''
+>>>>>>> 1b4e2747c96b67efc63c4468182acfc12d5d354a
+>>>>>>> bdfcf7dfbb1a25e2c0393f3c1a621737d0c43b3d:supersquad_project_submission/start_here.py
 
 df = pd.read_csv("cardiocases.csv") ## using pandas to make the csv a dataframe
 
@@ -409,6 +629,11 @@ tree.pack()
 
 # root.mainloop()
 
+<<<<<<< HEAD:Supersquad Project Submission/start_here.py
+=======
+# run the gui window
+#root.mainloop()
+>>>>>>> bdfcf7dfbb1a25e2c0393f3c1a621737d0c43b3d:supersquad_project_submission/start_here.py
 
 '''JOHN'S DESCRIPTIVE STATISTICS MODULE AND GUI SCRIPT'''
 
