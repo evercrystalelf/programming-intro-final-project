@@ -1,15 +1,15 @@
 import csv
 import numpy as np
 import pandas as pd
-import seaborn as sns
-import matplotlib.pyplot as plt
-from matplotlib.backends.backend_tkagg import (
-    FigureCanvasTkAgg, NavigationToolbar2Tk)
-from matplotlib.backend_bases import key_press_handler
-from matplotlib.figure import Figure
-#https://matplotlib.org/3.1.0/gallery/user_interfaces/embedding_in_tk_sgskip.html
 
-df=pd.read_csv('patients.csv')
+
+empty_list=[]
+women_under_65=[]
+women_over_65=[]
+men_under_65=[]
+men_over_65=[]
+
+df=pd.read_csv('patient_with_cardio_case.csv')
 women_under_65df=df[(df['age']<65)&(df['sex']=='F')]
 women_over_65df=df[(df['age']>=65)&(df['sex']=='F')]
 men_under_65df=df[(df['age']<65)&(df['sex']=='M')]
@@ -26,15 +26,6 @@ def print_stats(dffs, string):
 
 def counts(string): #for GUI
     return '%s \n' % df.groupby(string)['id'].count().to_string()
-
-def graphsea(string):
-    fig, axs = plt.subplots(ncols=4, sharey=True)
-    sns.boxplot(x=women_under_65df[string], ax=axs[0], orient='v').set(xlabel='women_under_65', ylabel=string)
-    sns.boxplot(x=women_over_65df[string], ax=axs[1], orient='v').set(xlabel='women_over_65', ylabel='')
-    sns.boxplot(x=men_under_65df[string], ax=axs[2], orient='v').set(xlabel='men_under_65', ylabel='')
-    sns.boxplot(x=men_over_65df[string], ax=axs[3], orient='v').set(xlabel='men_over_65', ylabel='')
-    return fig
-
 import tkinter as tk
 root = tk.Tk()
 root.wm_title("Supersquad")
@@ -42,13 +33,15 @@ w=tk.Label(root, text="Counts and Statistics")
 w.pack()
 
 tkvar = tk.StringVar(root)
-choices = {'Disease at Admission','state','visittype','Comorbidities','provider'}
+choices = {'Disease at Admission','state','visittype','Comorbidities'}
 tkvar.set('state')
 
 a=tk.Label(root, text="Choose a attribute to count:")
 a.pack()
 
 popupMenu = tk.OptionMenu(root, tkvar, *choices)
+#y=tk.Label(popupMenu, text="Features")
+#y.pack()
 popupMenu.pack()
 
 b=tk.Label(root, text="Choose a grouping and a lab test for Discriptive Statistics:")
@@ -67,14 +60,16 @@ choices1 = {'All',
       'Women Over 65',
       'Men Under 65',
       'Men Over 65'}
-choices2 = {'Triglycerides','HDL','LDL','Total Cholesterol','CRP', 'bmi', 'respiration','systolic blood pressure','diastolic blood pressure','temperature'}
+choices2 = {'Triglycerides','HDL','LDL','Total Cholesterol','CRP'}
 tkvar1.set('All') # set the default option
 tkvar2.set('HDL')
 
 popupMenu1 = tk.OptionMenu(root, tkvar1, *choices1,)
+#tk.Label(root, text="Choose a Group for Statistics")
 popupMenu1.pack()
 
 popupMenu2 = tk.OptionMenu(root, tkvar2, *choices2,)
+#tk.Label(root, text="Choose a Test for Statistics")
 popupMenu2.pack()
 
 T = tk.Text(root, height=10, width=50)
@@ -86,28 +81,5 @@ def print2(*args):
     T.insert(tk.END, print_stats(dfss[tkvar1.get()], tkvar2.get()) )   
 tkvar1.trace('w', holder)
 tkvar2.trace('w', print2)
-
-tkvar3 = tk.StringVar(root)
-choices3 = {'Triglycerides','HDL','LDL','Total Cholesterol','CRP', 'bmi', 'respiration','systolic blood pressure','diastolic blood pressure','temperature'}
-tkvar3.set('HDL')
-
-c=tk.Label(root, text="Choose a lab test to graph:")
-c.pack()
-popupMenu3 = tk.OptionMenu(root, tkvar3, *choices3)
-tk.Label(root, text="Choose a Lab Test to Graph")
-popupMenu3.pack()
-
-
-def graph(*args):
-    fig=graphsea(tkvar3.get())
-    dlg = tk.Toplevel(root)
-    y=tk.Label(dlg, text="Feature")
-    y.pack()
-    canvas = FigureCanvasTkAgg(fig, master=dlg)  # A tk.DrawingArea.
-    canvas.draw()
-    canvas.get_tk_widget().pack(side=tk.TOP, fill=tk.BOTH, expand=1)
-
-
-tkvar3.trace('w', graph)
 
 tk.mainloop()
