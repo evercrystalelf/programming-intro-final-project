@@ -4,6 +4,15 @@ from tkinter import *
 from tkinter import ttk
 import csv
 import random
+import pandas as pd
+import numpy as np
+import seaborn as sns
+import matplotlib.pyplot as plt
+from matplotlib.backends.backend_tkagg import (
+    FigureCanvasTkAgg, NavigationToolbar2Tk)
+from matplotlib.backend_bases import key_press_handler
+from matplotlib.figure import Figure
+import pandas as pd
 
 #importing the modules
 from patient_cardiovascular import patient_cardiovascular
@@ -151,6 +160,7 @@ with open('patients.csv', 'w', newline='') as file:
     # write every patient to the csv file
     for p in patients:
         w.writerow([p.id, p.provider, p.age, p.sex, p.state, p.visittype, p.weight, p.height, p.bmi(), p.heart_rate, p.respiration, p.blood_pressure[0], p.blood_pressure[1], "{:.2f}".format(p.temperature)])
+file.close()
 
 '''JIN'S GUI CODE'''
 
@@ -345,11 +355,12 @@ find_btn.pack()
 
 
 # run the gui window
-root.mainloop()
+#root.mainloop()
 
 '''END JIN'S CODE'''
 
 '''THERESA'S GUI SCRIPT'''
+'''
 
 df = pd.read_csv("cardiocases.csv") ## using pandas to make the csv a dataframe
 
@@ -399,12 +410,14 @@ tree.pack()
 
 root.mainloop()
 
+'''
+
 '''JOHN'S DESCRIPTIVE STATISTICS MODULE AND GUI SCRIPT'''
 
-root = tk.Tk()
-root.wm_title("Supersquad")
-w=tk.Label(root, text="Counts and Statistics")
-w.pack()
+#root = tk.Tk()
+#root.wm_title("Supersquad")
+#=tk.Label(root, text="Counts and Statistics")
+#w.pack()
 
 tkvar = tk.StringVar(root)
 choices = {'Disease at Admission','state','visittype','Comorbidities','provider'}
@@ -421,7 +434,7 @@ b.pack()
 
 def print1(*args):
     T.delete(1.0, tk.END)
-    T.insert(tk.END, counts.statistics(tkvar.get()) )   
+    T.insert(tk.END, statistics.counts(tkvar.get()) )   
 tkvar.trace('w', print1)
 
 tkvar1 = tk.StringVar(root)
@@ -448,7 +461,7 @@ def holder(*args):
     holder=tkvar1.get()
 def print2(*args):
     T.delete(1.0, tk.END)
-    T.insert(tk.END, print_stats.statistics(dfss[tkvar1.get()], tkvar2.get()) )   
+    T.insert(tk.END, statistics.print_stats(statistics.dfss[tkvar1.get()], tkvar2.get()) )   
 tkvar1.trace('w', holder)
 tkvar2.trace('w', print2)
 
@@ -464,7 +477,7 @@ popupMenu3.pack()
 
 
 def graph(*args):
-    fig=graphsea.statistics(tkvar3.get())
+    fig=statistics.graphsea(tkvar3.get())
     dlg = tk.Toplevel(root)
     y=tk.Label(dlg, text="Feature")
     y.pack()
