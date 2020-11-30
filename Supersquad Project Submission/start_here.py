@@ -360,12 +360,11 @@ find_btn.pack()
 '''END JIN'S CODE'''
 
 '''THERESA'S GUI SCRIPT'''
-'''
 
 df = pd.read_csv("cardiocases.csv") ## using pandas to make the csv a dataframe
 
-root = tk.Tk() ## create window
-root.title('Supersquad') ## title of window
+# root = tk.Tk() ## create window
+# root.title('Supersquad') ## title of window
 
 lbl = Label(root, text = "Please select a Risk to view associated patients") ## adding a label to display above drop down
 lbl.pack()
@@ -408,16 +407,15 @@ treescrollx.pack(side="bottom", fill="x") # make the scrollbar fill the x axis o
 treescrolly.pack(side="right", fill="y") # make the scrollbar fill the y axis of the Treeview widget
 tree.pack()  
 
-root.mainloop()
+# root.mainloop()
 
-'''
 
 '''JOHN'S DESCRIPTIVE STATISTICS MODULE AND GUI SCRIPT'''
 
-#root = tk.Tk()
-#root.wm_title("Supersquad")
-#=tk.Label(root, text="Counts and Statistics")
-#w.pack()
+# root = tk.Tk()
+# root.wm_title("Supersquad")
+# w =tk.Label(root, text="Counts and Statistics")
+# w.pack()
 
 tkvar = tk.StringVar(root)
 choices = {'Disease at Admission','state','visittype','Comorbidities','provider'}
@@ -488,4 +486,4 @@ def graph(*args):
 
 tkvar3.trace('w', graph)
 
-tk.mainloop()
+root.mainloop()
