@@ -2,7 +2,7 @@ import tkinter as tk
 import csv
 from tkinter import *
 from tkinter import ttk
-from ..patient import patient
+
 
 patients = []
 header = []
