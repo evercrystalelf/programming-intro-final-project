@@ -16,7 +16,6 @@ import random
 
 #importing the modules
 # from patient_cardiovascular import patient_cardiovascular
-from statistics import statistics
 
 '''JIN'S CODE'''
 
@@ -627,13 +626,42 @@ tree.pack()
 
 '''JOHN'S DESCRIPTIVE STATISTICS MODULE AND GUI SCRIPT'''
 
+df1=pd.read_csv('cardiocases.csv')
+df2=pd.read_csv('patients.csv')
+df= df1.merge(df2, on='id')
+
+women_under_65df=df[(df['age_x']<65)&(df['sex_x']=='F')]
+women_over_65df=df[(df['age_x']>=65)&(df['sex_x']=='F')]
+men_under_65df=df[(df['age_x']<65)&(df['sex_x']=='M')]
+men_over_65df=df[(df['age_x']>=65)&(df['sex_x']=='M')]
+
+dfss={'All':df,
+      'Women Under 65':women_under_65df,
+      'Women Over 65':women_over_65df,
+      'Men Under 65':men_under_65df,
+      'Men Over 65':men_over_65df}
+
+def print_stats(dffs, string):
+    return(' Min: %d\n Max: %d\n Average: %f\nQuartiles:\n%s \n'% (dffs[string].min(), dffs[string].max(), dffs[string].mean(), dffs[string].quantile([.25, .5, .75, 1]).to_string())    )
+
+def counts(string): #for GUI
+    return '%s \n' % df.groupby(string)['id'].count().to_string()
+
+def graphsea(string):
+    fig, axs = plt.subplots(ncols=4, sharey=True)
+    sns.boxplot(x=women_under_65df[string], ax=axs[0], orient='v').set(xlabel='women_under_65', ylabel=string)
+    sns.boxplot(x=women_over_65df[string], ax=axs[1], orient='v').set(xlabel='women_over_65', ylabel='')
+    sns.boxplot(x=men_under_65df[string], ax=axs[2], orient='v').set(xlabel='men_under_65', ylabel='')
+    sns.boxplot(x=men_over_65df[string], ax=axs[3], orient='v').set(xlabel='men_over_65', ylabel='')
+    return fig
+
 # root = tk.Tk()
 # root.wm_title("Supersquad")
 # w =tk.Label(root, text="Counts and Statistics")
 # w.pack()
 
 tkvar = tk.StringVar(root)
-choices = {'Disease at Admission','state','visittype','Comorbidities','provider'}
+choices = {'Disease at Admission', 'Comobiditiy','state_x','visittype_x','provider_x'}
 tkvar.set('state')
 
 a=tk.Label(root, text="Choose a attribute to count:")
@@ -647,7 +675,7 @@ b.pack()
 
 def print1(*args):
     T.delete(1.0, tk.END)
-    T.insert(tk.END, statistics.counts(tkvar.get()) )   
+    T.insert(tk.END, counts(tkvar.get()) )   
 tkvar.trace('w', print1)
 
 tkvar1 = tk.StringVar(root)
@@ -658,7 +686,7 @@ choices1 = {'All',
       'Women Over 65',
       'Men Under 65',
       'Men Over 65'}
-choices2 = {'Triglycerides','HDL','LDL','Total Cholesterol','CRP', 'bmi', 'respiration','systolic blood pressure','diastolic blood pressure','temperature'}
+choices2 = {'Triglycerides','HDL','LDL','Total Cholesterol','CRP', 'bmi', 'respiration_y','heartrate_y','systolic blood pressure','diastolic blood pressure'}
 tkvar1.set('All') # set the default option
 tkvar2.set('HDL')
 
@@ -674,12 +702,12 @@ def holder(*args):
     holder=tkvar1.get()
 def print2(*args):
     T.delete(1.0, tk.END)
-    T.insert(tk.END, statistics.print_stats(statistics.dfss[tkvar1.get()], tkvar2.get()) )   
+    T.insert(tk.END, print_stats(dfss[tkvar1.get()], tkvar2.get()) )   
 tkvar1.trace('w', holder)
 tkvar2.trace('w', print2)
 
 tkvar3 = tk.StringVar(root)
-choices3 = {'Triglycerides','HDL','LDL','Total Cholesterol','CRP', 'bmi', 'respiration','systolic blood pressure','diastolic blood pressure','temperature'}
+choices3 = {'Triglycerides','HDL','LDL','Total Cholesterol','CRP', 'bmi', 'respiration','systolic blood pressure','diastolic blood pressure',}
 tkvar3.set('HDL')
 
 c=tk.Label(root, text="Choose a lab test to graph:")
